@@ -1,0 +1,1914 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hulool Al Waraq | Premium Packaging</title>
+    <meta
+      name="description"
+      content="Hulool Al Waraq delivers premium, sustainable packaging solutions for businesses across Saudi Arabia."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+
+    <!-- ─── Global smooth scroll + unified background ────────────────────── -->
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+
+      /* ── Single canvas — the ONLY background on the entire page ─────────
+         Fixed so it stays pinned as you scroll through all sections.      */
+      html, body {
+        background: #f6f4ee !important;
+      }
+
+      body {
+        background:
+          radial-gradient(ellipse 120% 55% at 0%   0%,   rgba(196,145,74, 0.20) 0%, transparent 70%),
+          radial-gradient(ellipse 110% 50% at 100% 0%,   rgba(62, 88, 44, 0.18) 0%, transparent 68%),
+          radial-gradient(ellipse 120% 55% at 0%   100%, rgba(72,100,54,  0.17) 0%, transparent 70%),
+          radial-gradient(ellipse 110% 50% at 100% 100%, rgba(221,180,100,0.16) 0%, transparent 68%),
+          radial-gradient(ellipse 90%  60% at 50%  22%,  rgba(88,118,58,  0.12) 0%, transparent 72%),
+          radial-gradient(ellipse 90%  60% at 50%  78%,  rgba(196,145,74, 0.12) 0%, transparent 72%),
+          radial-gradient(ellipse 70%  80% at 18%  50%,  rgba(58, 82, 42, 0.14) 0%, transparent 68%),
+          radial-gradient(ellipse 70%  80% at 82%  50%,  rgba(210,168,88, 0.13) 0%, transparent 68%),
+          radial-gradient(ellipse 100% 100% at 50% 50%,  rgba(240,228,195,0.22) 0%, transparent 75%),
+          #f6f4ee !important;
+        background-attachment: fixed !important;
+      }
+
+      /* ── Wipe every section/container background to transparent ─────────
+         Targets every class that styles.css might have coloured.          */
+      .hero,
+      .section,
+      .section-alt,
+      main,
+      .shell,
+      .container,
+      .hero-inner,
+      .hero-left,
+      .hero-right,
+      .grid,
+      .card,
+      .product,
+      .about,
+      .quote-grid,
+      .quote-form,
+      .section-header,
+      .product-grid,
+      .site-footer,
+      .footer-inner {
+        background: transparent !important;
+        background-color: transparent !important;
+        border-top: none !important;
+        border-bottom: none !important;
+        box-shadow: none !important;
+      }
+    </style>
+
+    <!-- ─── Hero scroll-fade overrides ───────────────────────────────────── -->
+    <style>
+      /* Full-width hero with no right column */
+      .hero-inner {
+        grid-template-columns: 1fr !important;
+        max-width: 860px !important;
+        text-align: center;
+      }
+
+      /* Scale up headline */
+      .hero h1 {
+        font-size: clamp(2.6rem, 6vw, 5.2rem) !important;
+        line-height: 1.08 !important;
+        letter-spacing: -0.03em;
+        margin-bottom: 1.4rem;
+      }
+
+      /* Wider sub-copy */
+      .hero-copy {
+        font-size: clamp(1.05rem, 2vw, 1.3rem) !important;
+        max-width: 600px;
+        margin-inline: auto;
+        margin-bottom: 2.4rem;
+        line-height: 1.7;
+      }
+
+      /* Centre actions */
+      .hero-actions {
+        justify-content: center !important;
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
+
+      /* Centre stats */
+      .hero-stats {
+        justify-content: center !important;
+        flex-wrap: wrap;
+        gap: 2rem;
+        margin-top: 3.5rem;
+      }
+
+      /* Eyebrow */
+      .hero .eyebrow {
+        text-align: center;
+        margin-bottom: 1rem;
+      }
+
+      /* ── Header — transparent, always visible ───────────────────────── */
+      .site-header {
+        background: transparent !important;
+        background-color: transparent !important;
+        border-bottom: none !important;
+        box-shadow: none !important;
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+      }
+
+      /* ── ReactBits-style: single dark pill nav + CTA pill ────────────── */
+
+      /* Container height */
+      .site-header .container {
+        height: 68px !important;
+        padding-block: 0 !important;
+        justify-content: space-between !important;
+      }
+
+      /* Nav row */
+      .site-header .nav {
+        display: flex !important;
+        align-items: center !important;
+        gap: 10px !important;
+      }
+
+      /* ── Unified frosted glass pill containing all nav links ───────────── */
+      .site-header .nav-links {
+        display: flex !important;
+        align-items: center !important;
+        gap: 2px !important;
+        background: rgba(248, 244, 236, 0.70) !important;
+        border-radius: 50px !important;
+        padding: 5px 6px !important;
+        backdrop-filter: blur(18px) !important;
+        -webkit-backdrop-filter: blur(18px) !important;
+        border: 1px solid rgba(196,145,74,0.22) !important;
+        font-size: 0.875rem !important;
+        letter-spacing: 0.01em !important;
+        text-transform: none !important;
+        box-shadow: 0 2px 14px rgba(0,0,0,0.06) !important;
+      }
+
+      .site-header .nav-links a {
+        display: inline-flex !important;
+        align-items: center !important;
+        padding: 6px 16px !important;
+        border-radius: 50px !important;
+        color: var(--muted) !important;
+        font-weight: 500 !important;
+        text-decoration: none !important;
+        transition: color 0.2s, background 0.2s !important;
+        white-space: nowrap !important;
+      }
+
+      .site-header .nav-links a:hover {
+        color: var(--accent) !important;
+        background: rgba(196,145,74,0.12) !important;
+      }
+
+      /* ── Gold CTA pill with nested dark inner pill ───────────────────── */
+      .site-header .nav-cta {
+        display: inline-flex !important;
+        align-items: center !important;
+        height: 38px !important;
+        padding: 0 5px 0 18px !important;
+        border-radius: 50px !important;
+        background: #c4914a !important;
+        color: #fff !important;
+        font-size: 0.82rem !important;
+        font-weight: 600 !important;
+        letter-spacing: 0.02em !important;
+        text-transform: none !important;
+        gap: 10px !important;
+        border: none !important;
+        text-decoration: none !important;
+        transition: transform 0.2s, box-shadow 0.2s, background 0.2s !important;
+        white-space: nowrap !important;
+      }
+
+      .site-header .nav-cta::after {
+        content: "→" !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 30px !important;
+        height: 30px !important;
+        border-radius: 50% !important;
+        background: #0a1006 !important;
+        color: #c4914a !important;
+        font-size: 15px !important;
+        flex-shrink: 0 !important;
+        transition: transform 0.2s !important;
+      }
+
+      .site-header .nav-cta:hover {
+        background: #d4a05a !important;
+        transform: translateY(-1px) !important;
+        box-shadow: 0 6px 24px rgba(196,145,74,0.38) !important;
+        color: #fff !important;
+      }
+
+      .site-header .nav-cta:hover::after {
+        transform: translateX(3px) !important;
+      }
+
+      /* ── Mobile: dark dropdown ───────────────────────────────────────── */
+      @media (max-width: 720px) {
+        .site-header .nav-links {
+          position: fixed !important;
+          inset: 68px 1rem auto !important;
+          flex-direction: column !important;
+          align-items: stretch !important;
+          border-radius: 18px !important;
+          padding: 8px !important;
+          gap: 2px !important;
+          background: rgba(248, 244, 236, 0.97) !important;
+          transform: translateY(-12px) !important;
+          opacity: 0 !important;
+          pointer-events: none !important;
+          transition: transform 0.2s ease, opacity 0.2s ease !important;
+          backdrop-filter: blur(20px) !important;
+        }
+
+        .site-header .nav-links.open {
+          transform: translateY(0) !important;
+          opacity: 1 !important;
+          pointer-events: auto !important;
+        }
+
+        .site-header .nav-links a {
+          padding: 10px 16px !important;
+          border-radius: 12px !important;
+        }
+
+        .site-header .nav-cta {
+          display: none !important;
+        }
+
+        .site-header .nav-toggle {
+          background: rgba(248, 244, 236, 0.88) !important;
+          border: 1px solid rgba(196,145,74,0.22) !important;
+        }
+
+        .site-header .nav-toggle span {
+          background: var(--accent) !important;
+        }
+      }
+
+      /* ── Offset anchor scroll for sticky header ─────────────────────────
+         Adjust the value to match your header's actual height in styles.css */
+      #services,
+      #products,
+      #about,
+      #contact,
+      #quote {
+        scroll-margin-top: 80px;
+      }
+      .hero-fade-wrap {
+        will-change: opacity, transform;
+        transition: opacity 0.05s linear, transform 0.05s linear;
+      }
+
+      /* ── Contact section — 4-up card grid ───────────────────────────── */
+      .contact-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.4rem;
+        margin-top: 2rem;
+      }
+
+      .contact-item {
+        background: var(--card);
+        border-radius: var(--radius-lg);
+        padding: 1.6rem 1.4rem;
+        border: 1px solid var(--border);
+        box-shadow: 0 22px 45px rgba(0,0,0,0.07);
+        text-decoration: none;
+        color: inherit;
+        display: flex;
+        flex-direction: column;
+        gap: 0.35rem;
+        transition: transform 0.22s, box-shadow 0.22s;
+      }
+
+      a.contact-item:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 30px 60px rgba(0,0,0,0.12);
+      }
+
+      .contact-item-icon {
+        width: 38px;
+        height: 38px;
+        border-radius: 10px;
+        background: var(--bg-alt);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--accent);
+        margin-bottom: 0.55rem;
+      }
+
+      .contact-item-label {
+        font-size: 0.7rem;
+        text-transform: uppercase;
+        letter-spacing: 0.16em;
+        color: var(--muted);
+        margin: 0;
+      }
+
+      .contact-item-value {
+        font-size: 0.87rem;
+        font-weight: 600;
+        color: var(--accent);
+        margin: 0;
+        word-break: break-all;
+      }
+
+      @media (max-width: 900px) {
+        .contact-grid { grid-template-columns: repeat(2, 1fr); }
+      }
+      @media (max-width: 480px) {
+        .contact-grid { grid-template-columns: 1fr; }
+      }
+
+      /* ── Spotlight / focus effect ────────────────────────────────────── */
+      .spotlight-overlay {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(10, 8, 5, 0.72);
+        backdrop-filter: blur(3px);
+        -webkit-backdrop-filter: blur(3px);
+        z-index: 40;
+        cursor: pointer;
+        transition: opacity 0.35s ease;
+      }
+
+      body.spotlight-active .spotlight-overlay {
+        display: block;
+      }
+
+      body[data-spotlight="contact"] #contact,
+      body[data-spotlight="quote"]   #quote {
+        position: relative;
+        z-index: 41;
+      }
+
+      /* ── Spotlight Card (ReactBits port) ────────────────────────────── */
+      .card-spotlight {
+        position: relative !important;
+        overflow: hidden !important;
+        --mouse-x: 50%;
+        --mouse-y: 50%;
+        --spotlight-color: rgba(196, 145, 74, 0.18);
+      }
+
+      .card-spotlight::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(circle at var(--mouse-x) var(--mouse-y), var(--spotlight-color), transparent 80%);
+        opacity: 0;
+        transition: opacity 0.5s ease;
+        pointer-events: none;
+        z-index: 0;
+        border-radius: inherit;
+      }
+
+      .card-spotlight:hover::before {
+        opacity: 1;
+      }
+
+      .card-spotlight > * {
+        position: relative;
+        z-index: 1;
+      }
+
+      /* ── Explore more wrap ────────────────────────────────────────────── */
+      .products-explore-wrap {
+        text-align: center;
+        margin-top: 2.4rem;
+      }
+
+      /* ── Products popup modal ─────────────────────────────────────────── */
+      .products-modal-overlay {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(10, 8, 5, 0.72);
+        backdrop-filter: blur(7px);
+        -webkit-backdrop-filter: blur(7px);
+        z-index: 50;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem 1rem;
+        overflow-y: auto;
+      }
+
+      .products-modal-overlay.open {
+        display: flex;
+      }
+
+      .products-modal {
+        position: relative;
+        background: linear-gradient(145deg, rgba(248,245,238,0.98), rgba(241,233,219,0.96));
+        border-radius: 28px;
+        border: 1px solid rgba(196,145,74,0.24);
+        box-shadow: 0 50px 100px rgba(0,0,0,0.44), 0 0 0 1px rgba(255,255,255,0.14);
+        max-width: 760px;
+        width: 100%;
+        padding: 2.2rem 2rem 2rem;
+        margin: auto;
+      }
+
+      .products-modal-close {
+        position: absolute;
+        top: 1.1rem;
+        right: 1.1rem;
+        width: 34px;
+        height: 34px;
+        border-radius: 50%;
+        border: 1px solid rgba(34,51,59,0.18);
+        background: rgba(255,255,255,0.55);
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--muted);
+        transition: background 0.2s, color 0.2s;
+      }
+
+      .products-modal-close:hover {
+        background: rgba(255,255,255,0.92);
+        color: var(--accent);
+      }
+
+      .products-modal .section-header {
+        max-width: none;
+        margin-bottom: 0;
+      }
+
+      /* ── Glass Icons grid ─────────────────────────────────────────────── */
+      .gicons-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.2rem;
+        margin: 1.8rem 0 1.6rem;
+      }
+
+      .gicon-wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.55rem;
+      }
+
+      .gicon-btn {
+        position: relative;
+        width: 100%;
+        aspect-ratio: 1;
+        border: none;
+        background: none;
+        cursor: pointer;
+        padding: 0;
+        border-radius: 22%;
+        -webkit-tap-highlight-color: transparent;
+        outline: none;
+      }
+
+      .gicon-back {
+        position: absolute;
+        inset: 0;
+        border-radius: 22%;
+        background: linear-gradient(135deg,
+          hsla(36, 35%, 93%, 0.62),
+          hsla(34, 22%, 85%, 0.46));
+        transform: rotate(15deg) scale(0.86);
+        transform-origin: center;
+        transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), background 0.3s ease;
+        border: 1px solid rgba(196,145,74,0.18);
+        box-shadow: 0 8px 20px rgba(0,0,0,0.07);
+      }
+
+      .gicon-btn:hover .gicon-back {
+        transform: rotate(15deg) scale(0.91);
+      }
+
+      .gicon-btn.active .gicon-back {
+        background: linear-gradient(135deg,
+          hsla(36, 55%, 89%, 0.78),
+          hsla(34, 38%, 78%, 0.62));
+        box-shadow: 0 10px 28px rgba(196,145,74,0.22);
+      }
+
+      .gicon-front {
+        position: absolute;
+        inset: 0;
+        border-radius: 22%;
+        background: hsla(0, 0%, 100%, 0.22);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(255,255,255,0.42);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--accent);
+        transition: background 0.25s ease, border-color 0.25s ease;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.05), inset 0 1px 0 rgba(255,255,255,0.6);
+      }
+
+      .gicon-btn:hover .gicon-front {
+        background: hsla(0, 0%, 100%, 0.36);
+      }
+
+      .gicon-btn.active .gicon-front {
+        background: hsla(0, 0%, 100%, 0.48);
+        border-color: rgba(196,145,74,0.42);
+      }
+
+      .gicon-label {
+        font-size: 0.67rem;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        color: var(--accent);
+        font-weight: 600;
+        text-align: center;
+        line-height: 1.35;
+      }
+
+      /* ── Featured / Industry strip labels ────────────────────────────── */
+      .pmod-section-label {
+        font-size: 0.67rem;
+        text-transform: uppercase;
+        letter-spacing: 0.18em;
+        color: var(--muted);
+        margin: 0 0 0.6rem;
+        font-weight: 500;
+      }
+
+      .pmod-featured-row,
+      .pmod-industry-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.48rem;
+      }
+
+      .pmod-feat-chip,
+      .pmod-ind-chip {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.36rem;
+        padding: 0.36rem 0.82rem;
+        border-radius: 999px;
+        border: 1px solid rgba(196,145,74,0.28);
+        background: rgba(196,145,74,0.08);
+        color: var(--accent);
+        font-size: 0.73rem;
+        font-weight: 500;
+        cursor: pointer;
+        font-family: inherit;
+        transition: background 0.18s, border-color 0.18s, transform 0.15s;
+        white-space: nowrap;
+      }
+
+      .pmod-feat-chip:hover,
+      .pmod-ind-chip:hover {
+        background: rgba(196,145,74,0.18);
+        border-color: rgba(196,145,74,0.5);
+        transform: translateY(-1px);
+      }
+
+      .pmod-feat-chip::before { content: "★"; font-size: 0.6em; opacity: 0.75; }
+      .pmod-ind-chip::before  { content: "◆"; font-size: 0.55em; opacity: 0.6; }
+
+      /* hide leftover legacy detail panels */
+      .gicon-detail, .gicon-detail-legacy { display: none !important; }
+
+      .pmod-divider {
+        border: none;
+        border-top: 1px solid rgba(34,51,59,0.1);
+        margin: 1.15rem 0;
+      }
+
+      /* ── Category product grid ────────────────────────────────────────── */
+      .cat-products {
+        display: none;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.72rem;
+      }
+
+      .cat-products.visible { display: grid; }
+
+      /* ── Rich product card ────────────────────────────────────────────── */
+      .pcard {
+        position: relative;
+        background: rgba(255,255,255,0.62);
+        border: 1px solid rgba(196,145,74,0.14);
+        border-radius: 14px;
+        padding: 0.9rem 0.9rem 0.8rem;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        gap: 0.38rem;
+        transition: box-shadow 0.2s, border-color 0.2s, transform 0.15s;
+      }
+
+      .pcard:hover {
+        box-shadow: 0 6px 18px rgba(0,0,0,0.09);
+        border-color: rgba(196,145,74,0.3);
+        transform: translateY(-1px);
+      }
+
+      .pcard-trending {
+        position: absolute;
+        top: 0.52rem;
+        right: 0.52rem;
+        font-size: 0.57rem;
+        text-transform: uppercase;
+        letter-spacing: 0.09em;
+        color: #c05a1f;
+        background: rgba(192,90,31,0.09);
+        border: 1px solid rgba(192,90,31,0.2);
+        border-radius: 999px;
+        padding: 0.15rem 0.45rem;
+        font-weight: 600;
+      }
+
+      .pcard-emoji {
+        font-size: 1.25rem;
+        line-height: 1;
+        margin-bottom: 0.05rem;
+      }
+
+      .pcard-name {
+        font-weight: 600;
+        font-size: 0.79rem;
+        color: var(--accent);
+        line-height: 1.3;
+        padding-right: 3rem;
+      }
+
+      .pcard-desc {
+        font-size: 0.7rem;
+        color: var(--muted);
+        line-height: 1.45;
+      }
+
+      .pcard-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.25rem;
+        margin-top: 0.05rem;
+      }
+
+      .pcard-tag {
+        font-size: 0.59rem;
+        text-transform: uppercase;
+        letter-spacing: 0.09em;
+        color: var(--accent);
+        background: rgba(196,145,74,0.09);
+        border: 1px solid rgba(196,145,74,0.2);
+        border-radius: 999px;
+        padding: 0.13rem 0.42rem;
+      }
+
+      .pcard-feature {
+        font-size: 0.67rem;
+        color: var(--accent-soft);
+        font-style: italic;
+      }
+
+      .pcard-meta {
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+      }
+
+      .pcard-rating {
+        font-size: 0.68rem;
+        color: #c4914a;
+        display: flex;
+        align-items: center;
+        gap: 0.18rem;
+      }
+
+      .pcard-price {
+        font-weight: 700;
+        color: var(--accent);
+        font-size: 0.82rem;
+      }
+
+      .pcard-specs {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.22rem;
+      }
+
+      .pcard-spec {
+        font-size: 0.59rem;
+        color: var(--muted);
+        background: rgba(34,51,59,0.06);
+        border-radius: 5px;
+        padding: 0.1rem 0.38rem;
+      }
+
+      .pcard-footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 0.15rem;
+      }
+
+      .pcard-stock {
+        font-size: 0.6rem;
+        color: #3a7d44;
+        background: rgba(58,125,68,0.09);
+        border: 1px solid rgba(58,125,68,0.2);
+        border-radius: 999px;
+        padding: 0.16rem 0.5rem;
+        text-transform: uppercase;
+        letter-spacing: 0.09em;
+      }
+
+      .pcard-view-btn {
+        font-size: 0.64rem;
+        text-transform: uppercase;
+        letter-spacing: 0.09em;
+        color: var(--accent);
+        background: rgba(196,145,74,0.1);
+        border: 1px solid rgba(196,145,74,0.25);
+        border-radius: 999px;
+        padding: 0.22rem 0.65rem;
+        cursor: pointer;
+        font-family: inherit;
+        font-weight: 500;
+        transition: background 0.18s, border-color 0.18s;
+      }
+
+      .pcard-view-btn:hover {
+        background: rgba(196,145,74,0.22);
+        border-color: rgba(196,145,74,0.45);
+      }
+
+      /* ── Product detail sub-popup ─────────────────────────────────────── */
+      .product-popup {
+        position: fixed;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 60;
+        background: rgba(10,8,5,0.48);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        padding: 1.5rem;
+      }
+
+      .product-popup-card {
+        position: relative;
+        background: linear-gradient(145deg, rgba(251,248,242,0.99), rgba(245,238,226,0.98));
+        border-radius: 20px;
+        border: 1px solid rgba(196,145,74,0.28);
+        box-shadow: 0 32px 70px rgba(0,0,0,0.36);
+        max-width: 420px;
+        width: 100%;
+        padding: 1.6rem 1.5rem 1.4rem;
+        max-height: 85vh;
+        overflow-y: auto;
+      }
+
+      .product-popup-close {
+        position: absolute;
+        top: 0.85rem;
+        right: 0.85rem;
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        border: 1px solid rgba(34,51,59,0.18);
+        background: rgba(255,255,255,0.55);
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--muted);
+        transition: background 0.2s, color 0.2s;
+        font-family: inherit;
+      }
+
+      .product-popup-close:hover {
+        background: rgba(255,255,255,0.9);
+        color: var(--accent);
+      }
+
+      .product-popup-name {
+        font-family: "Playfair Display", serif;
+        font-weight: 500;
+        font-size: 1.1rem;
+        color: var(--accent);
+        margin: 0 2rem 0.5rem 0;
+        line-height: 1.3;
+      }
+
+      .product-popup-desc {
+        font-size: 0.86rem;
+        color: var(--muted);
+        margin: 0 0 0.85rem;
+        line-height: 1.65;
+      }
+
+      .product-popup-specs {
+        margin: 0;
+        padding-left: 1.1rem;
+        color: var(--muted);
+        font-size: 0.82rem;
+        line-height: 1.9;
+      }
+
+      .product-popup-badges {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.4rem;
+        margin-top: 0.9rem;
+      }
+
+      .badge-stock {
+        font-size: 0.67rem;
+        text-transform: uppercase;
+        letter-spacing: 0.13em;
+        color: #3a7d44;
+        background: rgba(58,125,68,0.1);
+        border: 1px solid rgba(58,125,68,0.22);
+        border-radius: 999px;
+        padding: 0.22rem 0.6rem;
+      }
+
+      .badge-featured {
+        font-size: 0.67rem;
+        text-transform: uppercase;
+        letter-spacing: 0.13em;
+        color: var(--accent-soft);
+        background: rgba(196,145,74,0.12);
+        border: 1px solid rgba(196,145,74,0.28);
+        border-radius: 999px;
+        padding: 0.22rem 0.6rem;
+      }
+
+      @media (max-width: 600px) {
+        .gicons-grid { grid-template-columns: repeat(3, 1fr); gap: 0.7rem; }
+        .cat-products { grid-template-columns: 1fr; }
+        .products-modal { padding: 1.6rem 1.1rem; }
+        .product-popup-card { padding: 1.3rem; }
+      }
+      @media (max-width: 480px) {
+        .cat-products { grid-template-columns: 1fr; }
+      }
+    </style>
+
+  </head>
+  <body>
+    <div class="spotlight-overlay" id="spotlight-overlay"></div>
+    <header class="site-header">
+      <div class="shell container">
+        <a href="#top" class="brand">
+          <img src="./logo.png" alt="Hulool Al Waraq logo" class="brand-logo" />
+          <div class="brand-text">
+            <span class="brand-en">Hulool Al Waraq</span>
+            <span class="brand-sub">Premium Packaging Solutions</span>
+          </div>
+        </a>
+        <nav class="nav">
+          <button class="nav-toggle" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+          </button>
+          <div class="nav-links">
+            <a href="#services">Services</a>
+            <a href="#products">Products</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+          </div>
+          <a href="#quote" class="nav-cta">Request a quote</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="shell hero-inner reveal">
+
+          <!-- ── HERO LEFT — now full width, logo card removed ────────── -->
+          <div class="hero-left hero-fade-wrap">
+            <p class="eyebrow">Premium packaging, delivered</p>
+
+            <h1>Packaging that&nbsp;protects.<br>Service that&nbsp;performs.</h1>
+
+            <p class="hero-copy">
+              Industrial-strength, brand-ready packaging for manufacturers,
+              distributors, and retailers across the Eastern Province and beyond.
+              Every box, every wrap, every shipment — engineered to arrive right.
+            </p>
+
+            <div class="hero-actions">
+              <a href="#quote" class="btn primary">Request a quote</a>
+              <a href="#products" class="btn ghost">Explore products</a>
+            </div>
+
+            <dl class="hero-stats">
+              <div>
+                <dt><span data-countup data-to="15" data-suffix="+" data-after=" years">15+ years</span></dt>
+                <dd>Of packaging experience</dd>
+              </div>
+              <div>
+                <dt><span data-countup data-to="5" data-suffix="M+" data-after=" boxes">5M+ boxes</span></dt>
+                <dd>Packed and delivered</dd>
+              </div>
+              <div>
+                <dt><span data-countup data-to="98" data-suffix="%" data-after=" on-time">98% on-time</span></dt>
+                <dd>Delivery performance</dd>
+              </div>
+            </dl>
+          </div>
+          <!-- hero-right (logo card) removed -->
+
+        </div>
+      </section>
+
+      <section id="services" class="section">
+        <div class="shell reveal">
+          <header class="section-header">
+            <p class="eyebrow">Services</p>
+            <h2>From concept to packed pallet.</h2>
+            <p>
+              We combine manufacturing, kitting, and logistics to keep your lines moving and your
+              customers impressed.
+            </p>
+          </header>
+          <div class="grid three">
+            <article class="card reveal">
+              <h3>Custom boxes</h3>
+              <p>
+                Corrugated and retail-ready boxes sized for your products, weight, and handling
+                conditions.
+              </p>
+              <ul>
+                <li>Shipping cartons &amp; RSC</li>
+                <li>Die-cut &amp; display boxes</li>
+                <li>Printed outer packaging</li>
+              </ul>
+            </article>
+            <article class="card reveal">
+              <h3>Shrink wrapping</h3>
+              <p>
+                Secure, tamper-evident wrapping for bundled goods, trays, and pallets ready for
+                transport.
+              </p>
+              <ul>
+                <li>Clear &amp; printed film</li>
+                <li>Line-speed matched specs</li>
+                <li>Heat tunnel compatible</li>
+              </ul>
+            </article>
+            <article class="card reveal">
+              <h3>Kitting &amp; fulfillment</h3>
+              <p>
+                Component kitting and packing services that reduce handling time inside your facility.
+              </p>
+              <ul>
+                <li>Pre-packed product kits</li>
+                <li>Assembly line ready</li>
+                <li>Labeling &amp; inserts</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="products" class="section section-alt">
+        <div class="shell reveal">
+          <header class="section-header">
+            <p class="eyebrow">Products</p>
+            <h2>Core packaging range.</h2>
+          </header>
+          <div class="product-grid">
+            <article class="product reveal">
+              <h3>Corrugated boxes</h3>
+              <p>
+                Single, double, and heavy-duty wall options for transport, warehousing, and export.
+              </p>
+              <p class="meta-line">Ideal for: logistics, industrial, FMCG</p>
+            </article>
+            <article class="product reveal">
+              <h3>Protective wrap</h3>
+              <p>Bubble, foam, and cushioning materials to protect sensitive and high-value goods.</p>
+              <p class="meta-line">Ideal for: electronics, glass, engineering</p>
+            </article>
+            <article class="product reveal">
+              <h3>Labels &amp; print</h3>
+              <p>
+                Brand, barcode, and compliance labels built to survive storage, handling, and transit.
+              </p>
+              <p class="meta-line">Ideal for: any sector requiring traceability</p>
+            </article>
+          </div>
+          <div class="products-explore-wrap">
+            <button id="explore-more-btn" class="btn ghost">Explore more</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section">
+        <div class="shell about reveal">
+          <div>
+            <p class="eyebrow">About Hulool Al Waraq</p>
+            <h2>Eastern Province packaging partner.</h2>
+          </div>
+          <div>
+            <p>
+              Based in Saudi Arabia, we support manufacturers, distributors, and brands with packaging
+              that performs on the factory floor and in the hands of the customer. From box structure to
+              pallet patterns, we care about every detail.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section">
+        <div class="shell reveal">
+          <header class="section-header">
+            <p class="eyebrow">Contact us</p>
+            <h2>Reach out to our team.</h2>
+            <p>Based in the Eastern Province — ready to support your packaging needs across Saudi Arabia.</p>
+          </header>
+          <div class="contact-grid">
+            <a href="tel:+966535414997" class="contact-item">
+              <div class="contact-item-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.37 2 2 0 0 1 3.59 1H6.6a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.09a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </div>
+              <p class="contact-item-label">Phone</p>
+              <p class="contact-item-value">+966 53 541 4997</p>
+            </a>
+            <a href="https://wa.me/966535414997" target="_blank" rel="noopener" class="contact-item">
+              <div class="contact-item-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+              </div>
+              <p class="contact-item-label">WhatsApp</p>
+              <p class="contact-item-value">+966 53 541 4997</p>
+            </a>
+            <a href="mailto:info@huloolalwaraq.com" class="contact-item">
+              <div class="contact-item-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              </div>
+              <p class="contact-item-label">Email</p>
+              <p class="contact-item-value">info@huloolalwaraq.com</p>
+            </a>
+            <div class="contact-item">
+              <div class="contact-item-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <p class="contact-item-label">Location</p>
+              <p class="contact-item-value">Eastern Province, Saudi Arabia</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="quote" class="section section-alt">
+        <div class="shell quote-grid reveal">
+          <div>
+            <p class="eyebrow">Request a quote</p>
+            <h2>Tell us what you need packed.</h2>
+            <p>
+              Share a few details about your products and timelines. Our team will follow up with
+              options, lead times, and pricing.
+            </p>
+          </div>
+          <form class="quote-form" novalidate>
+            <div class="field">
+              <label for="company">Company</label>
+              <input id="company" name="company" type="text" required />
+            </div>
+            <div class="field">
+              <label for="type">Packaging type</label>
+              <input id="type" name="type" type="text" placeholder="Boxes, shrink, kitting..." required />
+            </div>
+            <div class="field">
+              <label for="quantity">Approx. quantity</label>
+              <input id="quantity" name="quantity" type="number" min="1" />
+            </div>
+            <div class="field">
+              <label for="timeline">Delivery timeline</label>
+              <input id="timeline" name="timeline" type="text" placeholder="e.g. 4–6 weeks" />
+            </div>
+            <div class="field">
+              <label for="cemail">Contact email</label>
+              <input id="cemail" name="cemail" type="email" required />
+            </div>
+            <div class="field">
+              <label for="notes">Notes</label>
+              <textarea id="notes" name="notes" rows="3"></textarea>
+            </div>
+            <button type="submit" class="btn primary full">Send request</button>
+            <p class="form-success" hidden>Thank you. We will review your request and get back to you.</p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="shell footer-inner">
+        <div class="footer-left">
+          <img src="./logo.png" alt="Hulool Al Waraq logo" class="footer-logo" />
+          <span class="footer-brand">Hulool Al Waraq</span>
+        </div>
+        <div class="footer-right">
+          <span>&copy; <span id="year"></span> Hulool Al Waraq. All rights reserved.</span>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ── Products popup modal ──────────────────────────────────────── -->
+    <div id="products-modal" class="products-modal-overlay">
+
+      <!-- Product detail sub-popup (fixed, above modal) -->
+      <div id="product-popup" class="product-popup" style="display:none">
+        <div class="product-popup-card">
+          <button class="product-popup-close" id="product-popup-close" aria-label="Close">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          </button>
+          <div id="product-popup-body"></div>
+        </div>
+      </div>
+
+      <div class="products-modal">
+        <button class="products-modal-close" id="products-modal-close" aria-label="Close">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+
+        <header class="section-header">
+          <p class="eyebrow">Full product range</p>
+          <h2>40 products across six categories.</h2>
+        </header>
+
+        <!-- Featured Solutions -->
+        <hr class="pmod-divider">
+        <p class="pmod-section-label">Featured Solutions</p>
+        <div class="pmod-featured-row">
+          <button class="pmod-feat-chip" data-product="3" type="button">Wrap Around Boxes</button>
+          <button class="pmod-feat-chip" data-product="5" type="button">Telescopic Produce Boxes</button>
+          <button class="pmod-feat-chip" data-product="20" type="button">Double-Decker Pizza Boxes</button>
+        </div>
+
+        <hr class="pmod-divider">
+
+        <!-- Glass icon category tabs -->
+        <div class="gicons-grid">
+
+          <div class="gicon-wrap">
+            <button class="gicon-btn active" data-cat="0" type="button">
+              <span class="gicon-back"></span>
+              <span class="gicon-front">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+              </span>
+            </button>
+            <span class="gicon-label">Corrugated</span>
+          </div>
+
+          <div class="gicon-wrap">
+            <button class="gicon-btn" data-cat="1" type="button">
+              <span class="gicon-back"></span>
+              <span class="gicon-front">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </span>
+            </button>
+            <span class="gicon-label">Protective</span>
+          </div>
+
+          <div class="gicon-wrap">
+            <button class="gicon-btn" data-cat="2" type="button">
+              <span class="gicon-back"></span>
+              <span class="gicon-front">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+              </span>
+            </button>
+            <span class="gicon-label">Industrial</span>
+          </div>
+
+          <div class="gicon-wrap">
+            <button class="gicon-btn" data-cat="3" type="button">
+              <span class="gicon-back"></span>
+              <span class="gicon-front">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/></svg>
+              </span>
+            </button>
+            <span class="gicon-label">Food</span>
+          </div>
+
+          <div class="gicon-wrap">
+            <button class="gicon-btn" data-cat="4" type="button">
+              <span class="gicon-back"></span>
+              <span class="gicon-front">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+              </span>
+            </button>
+            <span class="gicon-label">Retail</span>
+          </div>
+
+          <div class="gicon-wrap">
+            <button class="gicon-btn" data-cat="5" type="button">
+              <span class="gicon-back"></span>
+              <span class="gicon-front">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
+              </span>
+            </button>
+            <span class="gicon-label">Specialty</span>
+          </div>
+
+        </div>
+
+        <!-- Cat 0: Corrugated Boxes — 8 products (rendered by JS) -->
+        <div class="cat-products visible" data-panel="0"></div>
+
+        <!-- Cat 1: Protective Packaging — 6 products (rendered by JS) -->
+        <div class="cat-products" data-panel="1"></div>
+
+        <!-- Cat 2: Industrial Packaging — 6 products (rendered by JS) -->
+        <div class="cat-products" data-panel="2"></div>
+
+        <!-- Cat 3: Food Packaging — 7 products (rendered by JS) -->
+        <div class="cat-products" data-panel="3"></div>
+
+        <!-- Cat 4: Retail & E-commerce — 6 products (rendered by JS) -->
+        <div class="cat-products" data-panel="4"></div>
+
+        <!-- Cat 5: Specialty & Eco — 7 products (rendered by JS) -->
+        <div class="cat-products" data-panel="5"></div>
+
+        <!-- Industry-Specific Solutions -->
+        <hr class="pmod-divider">
+        <p class="pmod-section-label">Industry-Specific Solutions</p>
+        <div class="pmod-industry-row">
+          <button class="pmod-ind-chip" data-industry="4" type="button">E-commerce</button>
+          <button class="pmod-ind-chip" data-industry="3" type="button">Food &amp; Beverage</button>
+          <button class="pmod-ind-chip" data-industry="1" type="button">Electronics</button>
+          <button class="pmod-ind-chip" data-industry="5" type="button">Pharmaceutical</button>
+        </div>
+
+        <div class="gicon-detail-legacy" style="display:none" data-panel="0">
+          <p class="gicon-detail-count">85 products</p>
+          <h3>Corrugated Boxes</h3>
+          <p class="gicon-detail-desc">Single, double, and triple-wall options engineered for shipping, storage, and export. Lightweight yet durable — from produce crates to heavy industrial cartons.</p>
+          <div class="gicon-products-grid">
+            <div class="gicon-product-item">
+              <strong>Single Wall Corrugated</strong>
+              <span>3mm · 32 ECT · Lightweight &amp; fully recyclable</span>
+            </div>
+            <div class="gicon-product-item">
+              <strong>Double Wall Corrugated</strong>
+              <span>6mm · 48 ECT · Up to 65 lbs capacity</span>
+            </div>
+            <div class="gicon-product-item">
+              <strong>Triple Wall Corrugated</strong>
+              <span>15mm · 71 ECT · Up to 125 lbs capacity</span>
+            </div>
+            <div class="gicon-product-item">
+              <strong>Wrap Around Boxes</strong>
+              <span>Adjustable sizing · No void fill needed</span>
+            </div>
+            <div class="gicon-product-item">
+              <strong>Die Cut Boxes</strong>
+              <span>Custom tooling · Exact fit · No tape required</span>
+            </div>
+            <div class="gicon-product-item">
+              <strong>Telescopic Produce Boxes</strong>
+              <span>Ventilated · Moisture resistant · Stackable</span>
+            </div>
+            <div class="gicon-product-item">
+              <strong>Archive Storage Boxes</strong>
+              <span>Acid-free · Reinforced corners · Letter/legal sizes</span>
+            </div>
+            <div class="gicon-product-item">
+              <strong>Moving Boxes</strong>
+              <span>Extra strength · Grip handles · Multiple sizes</span>
+            </div>
+          </div>
+          <p class="gicon-detail-tags">Logistics · FMCG · Agriculture · E-commerce</p>
+        </div>
+
+        <div class="gicon-detail" data-panel="1">
+          <p class="gicon-detail-count">67 products</p>
+          <h3>Protective Packaging</h3>
+          <p class="gicon-detail-desc">Premium cushioning and void-fill materials that keep fragile and high-value goods intact throughout the supply chain — from bubble wrap to custom foam inserts.</p>
+          <div class="gicon-products-grid">
+            <div class="gicon-product-item">
+              <strong>Bubble Wrap Rolls</strong>
+              <span>12", 24", 48" widths · Anti-static · Perforated</span>
+            </div>
+            <div class="gicon-product-item">
+              <strong>Foam Packaging Inserts</strong>
+              <span>Custom-cut · Polyethylene/polyurethane · Reusable</span>
+            </div>
+            <div class="gicon-product-item">
+              <strong>Air Pillows</strong>
+              <span>4"×8" to 8"×4" · Lightweight · Biodegradable options</span>
+            </div>
+            <div class="gicon-product-item">
+              <strong>Packing Peanuts</strong>
+              <span>14 cu ft/bag · Biodegradable · Anti-static</span>
+            </div>
+            <div class="gicon-product-item">
+              <strong>Kraft Paper Void Fill</strong>
+              <span>100% recyclable · Crinkle cut · Cushioning grade</span>
+            </div>
+            <div class="gicon-product-item">
+              <strong>Corner Protectors</strong>
+              <span>Cardboard construction · Stackable · Recyclable</span>
+            </div>
+          </div>
+          <p class="gicon-detail-tags">Electronics · Glass · Engineering · Furniture</p>
+        </div>
+
+        <div class="gicon-detail" data-panel="2">
+          <p class="gicon-detail-count">54 products</p>
+          <h3>Industrial Packaging</h3>
+          <p class="gicon-detail-desc">Heavy-duty films, strapping, and wrapping solutions built for palletising, bundling, and long-haul transport across demanding environments.</p>
+          <div class="gicon-products-grid">
+            <div class="gicon-product-item">
+              <strong>Stretch Wrap Film</strong>
+              <span>18"/20" widths · 1,500 ft · UV resistant · High puncture resistance</span>
+            </div>
+            <div class="gicon-product-item">
+              <strong>Shrink Wrap Film</strong>
+              <span>Heat-activated · Crystal clear · Tamper evident</span>
+            </div>
+            <div class="gicon-product-item">
+              <strong>Steel Strapping</strong>
+              <span>High tensile strength · Corrosion resistant · Reusable</span>
+            </div>
+            <div class="gicon-product-item">
+              <strong>Plastic Strapping</strong>
+              <span>Polypropylene/polyester · Weather resistant</span>
+            </div>
+            <div class="gicon-product-item">
+              <strong>Industrial Tape</strong>
+              <span>Acrylic/hot-melt adhesives · High adhesion · Weather resistant</span>
+            </div>
+            <div class="gicon-product-item">
+              <strong>Pallet Covers</strong>
+              <span>Standard/custom sizes · UV &amp; weather protection</span>
+            </div>
+          </div>
+          <p class="gicon-detail-tags">Construction · Warehousing · Heavy Industry · Export</p>
+        </div>
+
+        <div class="gicon-detail" data-panel="3">
+          <p class="gicon-detail-count">78 products</p>
+          <h3>Food Packaging</h3>
+          <p class="gicon-detail-desc">Grease-resistant, moisture-proof, and temperature-retaining packaging for restaurants, bakeries, and fresh-produce operations — keeping food fresh from facility to table.</p>
+          <div class="gicon-products-grid">
+            <div class="gicon-product-item">
+              <strong>Double-Decker Pizza Boxes</strong>
+              <span>Two compartments · Superior heat retention</span>
+            </div>
+            <div class="gicon-product-item">
+              <strong>Food Delivery Boxes</strong>
+              <span>Insulated · Leak-proof · Stackable · 2-hr temp retention</span>
+            </div>
+            <div class="gicon-product-item">
+              <strong>Takeaway Containers</strong>
+              <span>Microwave-safe · 8 oz – 32 oz · Leak resistant</span>
+            </div>
+            <div class="gicon-product-item">
+              <strong>Bakery Boxes</strong>
+              <span>Window options · Grease resistant · Square &amp; rectangular</span>
+            </div>
+            <div class="gicon-product-item">
+              <strong>Produce Boxes</strong>
+              <span>Wax-coated · Moisture resistant · Ventilated</span>
+            </div>
+            <div class="gicon-product-item">
+              <strong>Beverage Carriers</strong>
+              <span>2/4/6/12-pack options · Secure grip · Recyclable</span>
+            </div>
+            <div class="gicon-product-item">
+              <strong>Insulated Shipping Boxes</strong>
+              <span>24–48 hr temperature control for perishables</span>
+            </div>
+          </div>
+          <p class="gicon-detail-tags">F&amp;B · Agriculture · Restaurants · Cold Chain</p>
+        </div>
+
+        <div class="gicon-detail" data-panel="4">
+          <p class="gicon-detail-count">92 products</p>
+          <h3>Retail &amp; E-commerce</h3>
+          <p class="gicon-detail-desc">Shelf-ready and direct-to-consumer packaging that protects product integrity while reinforcing your brand — from luxury gift boxes to high-volume mailers.</p>
+          <div class="gicon-products-grid">
+            <div class="gicon-product-item">
+              <strong>Retail Display Boxes</strong>
+              <span>Custom graphics · Eye-catching point-of-purchase design</span>
+            </div>
+            <div class="gicon-product-item">
+              <strong>Mailer Boxes</strong>
+              <span>Self-locking · No tape required · Branded options</span>
+            </div>
+            <div class="gicon-product-item">
+              <strong>Luxury Gift Boxes</strong>
+              <span>Magnetic closure · Ribbon included · Premium finish</span>
+            </div>
+            <div class="gicon-product-item">
+              <strong>Jewellery Boxes</strong>
+              <span>Velvet lining · Ring, necklace &amp; bracelet sizes</span>
+            </div>
+            <div class="gicon-product-item">
+              <strong>Cosmetic Packaging</strong>
+              <span>Luxury finish · Custom colours · Magnetic closure</span>
+            </div>
+            <div class="gicon-product-item">
+              <strong>Clothing Boxes</strong>
+              <span>Flat pack · Easy assembly · Brand customisation</span>
+            </div>
+          </div>
+          <p class="gicon-detail-tags">E-commerce · Retail · Consumer Goods · Luxury</p>
+        </div>
+
+        <div class="gicon-detail" data-panel="5">
+          <p class="gicon-detail-count">74 products</p>
+          <h3>Specialty &amp; Eco-Friendly</h3>
+          <p class="gicon-detail-desc">Certified, compliant, and sustainable packaging for regulated industries and businesses committed to reducing environmental impact — from clean-room to hazmat.</p>
+          <div class="gicon-products-grid">
+            <div class="gicon-product-item">
+              <strong>Anti-Static Bags</strong>
+              <span>ESD protection · Transparent · Heat sealable</span>
+            </div>
+            <div class="gicon-product-item">
+              <strong>Hazmat Packaging</strong>
+              <span>UN certified · DOT approved · Multiple hazard classes</span>
+            </div>
+            <div class="gicon-product-item">
+              <strong>Pharmaceutical Packaging</strong>
+              <span>Tamper-evident · Child resistant · FDA compliant</span>
+            </div>
+            <div class="gicon-product-item">
+              <strong>Medical Device Packaging</strong>
+              <span>ISO 11607 compliant · Sterile barrier · Peel-open</span>
+            </div>
+            <div class="gicon-product-item">
+              <strong>Temperature Controlled</strong>
+              <span>Maintains 2–8°C for 48+ hours · Monitoring capability</span>
+            </div>
+            <div class="gicon-product-item">
+              <strong>Clean Room Packaging</strong>
+              <span>ISO Class 5 · Particle-free · Sterile</span>
+            </div>
+            <div class="gicon-product-item">
+              <strong>Eco-Friendly Packaging</strong>
+              <span>100% biodegradable · 90-day breakdown · Compostable</span>
+            </div>
+          </div>
+          <p class="gicon-detail-tags">Pharma · Electronics · Medical · Sustainable</p>
+        </div>
+
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+
+    <!-- ─── Apple-style scroll fade — hero + all sections ────────────────
+         Move this into script.js if preferred (remove the script tags).
+    ──────────────────────────────────────────────────────────────────── -->
+    <script>
+      (function () {
+
+        /* ── 1. HERO — fades OUT as you scroll away ─────────────────── */
+        const heroEl = document.querySelector('.hero');
+        const heroFade = document.querySelector('.hero-fade-wrap');
+
+        function updateHero() {
+          if (!heroEl || !heroFade) return;
+          const progress = Math.min(window.scrollY / (heroEl.offsetHeight * 0.6), 1);
+          heroFade.style.opacity   = 1 - progress;
+          heroFade.style.transform = `translateY(${-(progress * 60)}px)`;
+        }
+
+        /* ── 2. SECTIONS — fade IN as they enter, fade OUT as they leave ─
+           Wraps the inner shell of every section below the hero so the
+           section background colour itself doesn't flicker.              */
+        const sectionShells = document.querySelectorAll(
+          '#services .shell, #products .shell, #about .shell, #contact .shell, #quote .shell'
+        );
+
+        /* Mark each shell so CSS doesn't fight us */
+        sectionShells.forEach(el => {
+          el.style.willChange  = 'opacity';
+          el.style.transition  = 'none'; /* driven entirely by scroll */
+        });
+
+        function clamp(v, lo, hi) { return Math.max(lo, Math.min(hi, v)); }
+
+        function updateSections() {
+          const vh = window.innerHeight;
+
+          sectionShells.forEach(el => {
+            const rect = el.getBoundingClientRect();
+
+            const inStart  = vh;
+            const inEnd    = vh * 0.25;
+            const outStart = vh * 0.40;
+            const outEnd   = 0;
+
+            let opacity = 1;
+
+            if (rect.top > inEnd) {
+              /* Entering from below */
+              const t = clamp((rect.top - inEnd) / (inStart - inEnd), 0, 1);
+              opacity = 1 - t;
+            } else if (rect.bottom < outStart) {
+              /* Leaving upward */
+              const t = clamp((outStart - rect.bottom) / (outStart - outEnd), 0, 1);
+              opacity = 1 - t;
+            }
+
+            el.style.opacity   = opacity;
+            el.style.transform = '';
+            el.style.filter    = '';
+          });
+        }
+
+        /* ── 3. Unified scroll handler ───────────────────────────────── */
+        function onScroll() {
+          updateHero();
+          updateSections();
+        }
+
+        window.addEventListener('scroll', onScroll, { passive: true });
+        onScroll(); /* initialise on load */
+
+      })();
+    </script>
+
+    <!-- ─── CountUp — vanilla JS port of the motion/react component ──────
+         Same spring physics: damping = 20 + 40*(1/duration),
+         stiffness = 100*(1/duration). Triggers once via IntersectionObserver.
+    ──────────────────────────────────────────────────────────────────── -->
+    <script>
+      (function () {
+        const DURATION = 2;        /* seconds — matches default duration prop */
+        const DELAY    = 0.3;      /* seconds — slight delay for polish       */
+
+        /* ── Spring simulation (matches useSpring internals) ────────────
+           Uses a damped harmonic oscillator stepped each rAF tick.       */
+        function makeSpring(from, to, duration) {
+          const damping   = 20 + 40 * (1 / duration);
+          const stiffness = 100 * (1 / duration);
+          const mass      = 1;
+
+          let position = from;
+          let velocity = 0;
+          let done     = false;
+
+          return {
+            step(dt) {
+              if (done) return position;
+              const spring  = -stiffness * (position - to);
+              const damper  = -damping   * velocity;
+              const accel   = (spring + damper) / mass;
+              velocity  += accel * dt;
+              position  += velocity * dt;
+              /* Settle when close enough */
+              if (Math.abs(position - to) < 0.01 && Math.abs(velocity) < 0.01) {
+                position = to;
+                done = true;
+              }
+              return position;
+            },
+            isDone() { return done; }
+          };
+        }
+
+        /* ── Animate a single span ───────────────────────────────────── */
+        function animateCounter(el) {
+          const to     = parseFloat(el.dataset.to)   || 0;
+          const from   = parseFloat(el.dataset.from) || 0;
+          const suffix = el.dataset.suffix            || '';
+          const after  = el.dataset.after             || '';
+          const delay  = parseFloat(el.dataset.delay) || DELAY;
+
+          setTimeout(() => {
+            const spring = makeSpring(from, to, DURATION);
+            let last = null;
+
+            function tick(ts) {
+              if (last === null) last = ts;
+              const dt = Math.min((ts - last) / 1000, 0.05); /* cap at 50 ms */
+              last = ts;
+
+              const val = spring.step(dt);
+              el.textContent = Math.round(val) + suffix + after;
+
+              if (!spring.isDone()) requestAnimationFrame(tick);
+              else el.textContent = to + suffix + after; /* snap to exact end */
+            }
+
+            requestAnimationFrame(tick);
+          }, delay * 1000);
+        }
+
+        /* ── Observe each [data-countup] span — fire once in view ────── */
+        const targets = document.querySelectorAll('[data-countup]');
+        if (!targets.length) return;
+
+        const observer = new IntersectionObserver((entries, obs) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              animateCounter(entry.target);
+              obs.unobserve(entry.target); /* once: true */
+            }
+          });
+        }, { threshold: 0.2 });
+
+        targets.forEach(el => {
+          /* Set initial text to "0 + suffix + after" before animation */
+          const suffix = el.dataset.suffix || '';
+          const after  = el.dataset.after  || '';
+          el.textContent = '0' + suffix + after;
+          observer.observe(el);
+        });
+
+      })();
+    </script>
+
+    <!-- ─── Spotlight effect (contact + quote) ────────────────────────── -->
+    <script>
+      (function () {
+        const overlay = document.getElementById('spotlight-overlay');
+        if (!overlay) return;
+
+        let activeSection = null;
+
+        function activate(section) {
+          activeSection = section;
+          document.body.setAttribute('data-spotlight', section.id);
+          document.body.classList.add('spotlight-active');
+          section.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+
+        function deactivate() {
+          document.body.classList.remove('spotlight-active');
+          document.body.removeAttribute('data-spotlight');
+          activeSection = null;
+        }
+
+        function setupTrigger(selector, sectionId) {
+          const trigger  = document.querySelector(selector);
+          const section  = document.getElementById(sectionId);
+          if (!trigger || !section) return;
+
+          trigger.addEventListener('click', function (e) {
+            e.preventDefault();
+            if (activeSection === section && document.body.classList.contains('spotlight-active')) {
+              deactivate();
+            } else {
+              activate(section);
+            }
+          });
+        }
+
+        /* Contact nav link → #contact section */
+        setupTrigger('.site-header a[href="#contact"]', 'contact');
+
+        /* "Request a quote" — nav CTA and hero button → #quote section */
+        setupTrigger('.nav-cta[href="#quote"]',        'quote');
+        setupTrigger('.hero a[href="#quote"]',          'quote');
+
+        /* Dismiss on overlay click, Escape, or scroll */
+        overlay.addEventListener('click', deactivate);
+        document.addEventListener('keydown', function (e) {
+          if (e.key === 'Escape') deactivate();
+        });
+        window.addEventListener('scroll', function () {
+          if (document.body.classList.contains('spotlight-active')) deactivate();
+        }, { passive: true });
+      })();
+    </script>
+
+    <!-- ─── Spotlight Card + Explore toggle ─────────────────────────────── -->
+    <script>
+      (function () {
+        /* ── Clean up any leftover border-glow DOM from previous version ── */
+        document.querySelectorAll('.border-glow-inner').forEach(function (inner) {
+          var parent = inner.parentNode;
+          Array.from(inner.childNodes).forEach(function (n) { parent.insertBefore(n, inner); });
+          inner.remove();
+        });
+        document.querySelectorAll('.edge-light').forEach(function (el) { el.remove(); });
+        document.querySelectorAll('.border-glow-card').forEach(function (el) {
+          el.classList.remove('border-glow-card');
+        });
+
+        /* ── Spotlight Card — apply to all cards ───────────────────────── */
+        document.querySelectorAll('.card, .product, .contact-item').forEach(function (card) {
+          card.classList.add('card-spotlight');
+          card.addEventListener('mousemove', function (e) {
+            var r = card.getBoundingClientRect();
+            card.style.setProperty('--mouse-x', (e.clientX - r.left) + 'px');
+            card.style.setProperty('--mouse-y', (e.clientY - r.top)  + 'px');
+          });
+        });
+
+        /* ── Products modal open / close ──────────────────────────────── */
+        var modal      = document.getElementById('products-modal');
+        var closeBtn   = document.getElementById('products-modal-close');
+        var exploreBtn = document.getElementById('explore-more-btn');
+
+        function openProductsModal() {
+          if (!modal) return;
+          modal.classList.add('open');
+          document.body.style.overflow = 'hidden';
+        }
+
+        function closeProductsModal() {
+          if (!modal) return;
+          modal.classList.remove('open');
+          document.body.style.overflow = '';
+        }
+
+        if (exploreBtn) {
+          exploreBtn.addEventListener('click', openProductsModal);
+        }
+        if (closeBtn) {
+          closeBtn.addEventListener('click', closeProductsModal);
+        }
+        if (modal) {
+          modal.addEventListener('click', function (e) {
+            if (e.target === modal) closeProductsModal();
+          });
+        }
+
+        /* ── Product data — 40 products ────────────────────────────────── */
+        var P = [
+          /* 0–7  Corrugated */
+          {e:'📦',n:'Single Wall Corrugated Boxes',    d:'Lightweight yet durable boxes perfect for shipping and storage.',            cat:'Corrugated Boxes',ind:'Ecommerce',    r:2847,pr:'$1.25', feat:'Available in 50+ standard sizes',      s:['3mm thickness','32 ECT rating','Recyclable'],              f:false,t:false},
+          {e:'📦',n:'Double Wall Corrugated Boxes',    d:'Enhanced strength for heavier items and long-distance shipping.',            cat:'Corrugated Boxes',ind:'Logistics',    r:1923,pr:'$2.15', feat:'Up to 65 lbs capacity',                s:['6mm thickness','48 ECT rating','Heavy duty'],              f:false,t:false},
+          {e:'📦',n:'Triple Wall Corrugated Boxes',    d:'Maximum protection for industrial and heavy-duty applications.',             cat:'Corrugated Boxes',ind:'Industrial',   r:856, pr:'$4.85', feat:'Up to 125 lbs capacity',               s:['15mm thickness','71 ECT rating','Industrial grade'],       f:false,t:true},
+          {e:'📦',n:'Wrap Around Boxes',               d:'Adjustable boxes that wrap around products for a perfect fit.',              cat:'Corrugated Boxes',ind:'Ecommerce',    r:1245,pr:'$3.50', feat:'No void fill required',                s:['Adjustable sizing','No void fill','Cost effective'],       f:true, t:true},
+          {e:'✂️',n:'Die Cut Boxes',                   d:'Precision-cut boxes designed for specific product dimensions.',              cat:'Corrugated Boxes',ind:'Retail',       r:967, pr:'$2.75', feat:'Precision custom sizing',              s:['Custom tooling','Exact fit','No tape required'],           f:false,t:false},
+          {e:'🌿',n:'Telescopic Boxes for Fresh Produce',d:'Ventilated boxes designed specifically for fresh fruits and vegetables.',  cat:'Corrugated Boxes',ind:'Agriculture',  r:567, pr:'$5.15', feat:'Ventilated moisture resistant',        s:['Stackable design','Moisture resistant','Ventilated'],      f:true, t:true},
+          {e:'🗂️',n:'Archive Storage Boxes',           d:'Long-term storage boxes for documents and files.',                          cat:'Storage Boxes',   ind:'Office',       r:1456,pr:'$8.99', feat:'Long-term document storage',           s:['Acid-free','Reinforced corners','Letter/legal size'],      f:false,t:false},
+          {e:'🚚',n:'Moving Boxes',                    d:'Heavy-duty boxes for household and commercial moving.',                     cat:'Moving Boxes',    ind:'Residential',  r:2134,pr:'$3.25', feat:'Extra strength with handles',          s:['Multiple sizes','Grip handles','Extra strength'],          f:false,t:true},
+          /* 8–13 Protective */
+          {e:'🫧',n:'Bubble Wrap Rolls',               d:'Premium bubble wrap for cushioning and protection of fragile items.',       cat:'Protective',      ind:'Electronics',  r:3421,pr:'$0.89', feat:'Premium cushioning rolls',             s:['3 widths available','Anti-static','Perforated'],           f:false,t:true},
+          {e:'🧱',n:'Foam Packaging Inserts',          d:'Custom-cut foam inserts for fragile item protection.',                      cat:'Protective',      ind:'Electronics',  r:756, pr:'$12.99',feat:'Custom-cut protection',              s:['Custom cutting','Polyethylene/PU','Reusable'],             f:false,t:false},
+          {e:'💨',n:'Air Pillows',                     d:'Inflatable cushioning for void fill and lightweight protection.',           cat:'Protective',      ind:'Ecommerce',    r:2134,pr:'$0.15', feat:'Lightweight void fill',                s:['Biodegradable options','Multiple sizes','Lightweight'],    f:false,t:true},
+          {e:'🌾',n:'Packing Peanuts',                 d:'Loose fill packaging for irregular shaped items.',                         cat:'Protective',      ind:'Fragile Goods',r:1567,pr:'$24.99',feat:'Irregular shape coverage',            s:['14 cu ft/bag','Biodegradable','Anti-static'],              f:false,t:false},
+          {e:'📄',n:'Kraft Paper Void Fill',           d:'Eco-friendly paper cushioning and void fill.',                             cat:'Protective',      ind:'Ecommerce',    r:892, pr:'$18.50',feat:'Eco-friendly cushioning',             s:['100% recyclable','Crinkle cut','Natural kraft'],           f:false,t:true},
+          {e:'📐',n:'Corner Protectors',               d:'Cardboard corner protectors for shipping and storage.',                    cat:'Protective',      ind:'Furniture',    r:1456,pr:'$1.25', feat:'Edge damage prevention',               s:['Various sizes','Stackable','Recyclable'],                  f:false,t:false},
+          /* 14–19 Industrial */
+          {e:'🌀',n:'Stretch Wrap Film',               d:'Industrial strength film for pallet wrapping and bundling.',               cat:'Industrial',      ind:'Warehousing',  r:1234,pr:'$45.99',feat:'Superior pallet wrapping',            s:['18"/20" widths','1,500 ft length','UV resistant'],         f:false,t:true},
+          {e:'🔥',n:'Shrink Wrap Film',                d:'Heat-activated film for product bundling and protection.',                 cat:'Industrial',      ind:'Manufacturing',r:987, pr:'$38.75',feat:'Tamper-evident bundling',             s:['Multiple gauges','Crystal clear','Heat activated'],        f:false,t:false},
+          {e:'⛓️',n:'Steel Strapping',                 d:'Heavy-duty steel strapping for industrial applications.',                  cat:'Industrial',      ind:'Heavy Industry',r:456,pr:'$125.00',feat:'Maximum tensile strength',           s:['High tensile','Corrosion resistant','Reusable'],           f:false,t:false},
+          {e:'🔗',n:'Plastic Strapping',               d:'Lightweight alternative to steel strapping.',                             cat:'Industrial',      ind:'Logistics',    r:723, pr:'$65.50',feat:'Lightweight strong option',            s:['PP/polyester','Weather resistant','Cost effective'],       f:false,t:true},
+          {e:'📌',n:'Industrial Tape',                 d:'Heavy-duty tape for industrial packaging applications.',                   cat:'Industrial',      ind:'Manufacturing',r:1567,pr:'$8.99', feat:'High adhesion all-weather',            s:['Acrylic/hot-melt','High adhesion','Weather resistant'],    f:false,t:true},
+          {e:'🛡️',n:'Pallet Covers',                   d:'Protective covers for palletised goods.',                                  cat:'Industrial',      ind:'Warehousing',  r:678, pr:'$15.75',feat:'Full UV and weather protection',       s:['Custom sizes','UV protection','Weather resistant'],        f:false,t:false},
+          /* 20–26 Food */
+          {e:'🍕',n:'Double-Decker Pizza Boxes',       d:'Innovative two-level pizza delivery boxes — fits two large pizzas efficiently.',cat:'Food Packaging',ind:'Restaurants',r:892,pr:'$2.85',feat:'Dual compartment design',             s:['Heat retention','Grease resistant','Two compartments'],    f:true, t:true},
+          {e:'🛵',n:'Food Delivery Boxes',             d:'Insulated boxes for hot food delivery with extended temperature retention.',cat:'Food Packaging',  ind:'Delivery',    r:1834,pr:'$3.15', feat:'2-hour temperature retention',         s:['Insulated walls','Leak-proof','Stackable'],                f:false,t:true},
+          {e:'🥡',n:'Takeaway Containers',             d:'Microwave-safe containers for food takeaway in various sizes.',           cat:'Food Packaging',  ind:'Restaurants',  r:3421,pr:'$0.95', feat:'Microwave-safe stackable',             s:['8 oz to 32 oz','Microwave safe','Leak resistant'],         f:false,t:true},
+          {e:'🧁',n:'Bakery Boxes',                    d:'Specialised boxes for cakes, pastries, and baked goods.',                 cat:'Food Packaging',  ind:'Bakeries',     r:1234,pr:'$1.85', feat:'Window display options',               s:['Square/rectangular','Window options','Grease resistant'],  f:false,t:false},
+          {e:'🌾',n:'Produce Boxes',                   d:'Wax-coated boxes for fresh fruits and vegetables.',                       cat:'Food Packaging',  ind:'Agriculture',  r:987, pr:'$3.15', feat:'Moisture-resistant ventilated',        s:['Wax-coated','Moisture resistant','Ventilated'],            f:false,t:false},
+          {e:'🥤',n:'Beverage Carriers',               d:'Secure carriers for bottles and cans in multiple configurations.',        cat:'Food Packaging',  ind:'Beverages',    r:1247,pr:'$2.45', feat:'Multi-pack configurations',            s:['2/4/6/12-pack','Secure grip','Recyclable'],                f:false,t:true},
+          {e:'🧊',n:'Insulated Shipping Boxes',        d:'Temperature-controlled packaging for perishables.',                       cat:'Food Packaging',  ind:'Cold Chain',   r:634, pr:'$8.99', feat:'48hr temperature control',             s:['24-48hr control','Insulated walls','Monitoring capable'],  f:false,t:true},
+          /* 27–32 Retail */
+          {e:'🏪',n:'Retail Display Boxes',            d:'Point-of-purchase displays for retail environments.',                     cat:'Retail',          ind:'Retail Stores',r:456, pr:'$15.50',feat:'Point-of-purchase display',           s:['Custom graphics','Easy setup','Eye-catching'],             f:false,t:true},
+          {e:'📮',n:'Mailer Boxes',                    d:'E-commerce shipping boxes with easy-open design.',                        cat:'Retail',          ind:'Ecommerce',    r:1789,pr:'$2.45', feat:'Self-locking no tape needed',          s:['Self-locking','No tape','Branded options'],                f:false,t:true},
+          {e:'🎁',n:'Gift Boxes',                      d:'Premium presentation boxes for gifts and retail.',                        cat:'Retail',          ind:'Gifting',      r:892, pr:'$4.25', feat:'Magnetic closure luxury finish',       s:['Magnetic closure','Ribbon included','Luxury finish'],      f:false,t:false},
+          {e:'💎',n:'Jewelry Boxes',                   d:'Specialised packaging for jewellery and small valuables.',                cat:'Retail',          ind:'Jewelry',      r:1345,pr:'$1.95', feat:'Velvet lined secure closure',          s:['Velvet lining','Secure closure','Elegant design'],         f:false,t:false},
+          {e:'✨',n:'Cosmetic Packaging',              d:'Elegant packaging for beauty products.',                                  cat:'Retail',          ind:'Beauty',       r:1234,pr:'$4.95', feat:'Custom luxury branding',               s:['Luxury finish','Custom colours','Magnetic closure'],       f:false,t:true},
+          {e:'👗',n:'Clothing Boxes',                  d:'Premium boxes for apparel and fashion items.',                            cat:'Retail',          ind:'Fashion',      r:987, pr:'$3.75', feat:'Flat pack brand customised',           s:['Flat pack design','Easy assembly','Brand customisation'],  f:false,t:true},
+          /* 33–39 Specialty */
+          {e:'⚡',n:'Anti-Static Bags',                d:'ESD protection bags for electronic components.',                          cat:'Specialty',       ind:'Electronics',  r:567, pr:'$0.45', feat:'ESD discharge protection',             s:['ESD protection','Transparent','Heat sealable'],            f:false,t:true},
+          {e:'⚠️',n:'Hazmat Packaging',                d:'UN certified packaging for dangerous goods compliant with international regulations.',cat:'Specialty',ind:'Chemical',r:234,pr:'$25.99',feat:'UN certified compliance',             s:['UN certified','DOT approved','Multi-hazard'],              f:false,t:false},
+          {e:'💊',n:'Pharmaceutical Packaging',        d:'Tamper-evident packaging for pharmaceutical products.',                  cat:'Specialty',       ind:'Pharma',       r:445, pr:'$3.75', feat:'Tamper-evident childproof',            s:['Tamper evident','Child resistant','FDA compliant'],        f:false,t:true},
+          {e:'🏥',n:'Medical Device Packaging',        d:'Sterile packaging for medical devices.',                                  cat:'Specialty',       ind:'Medical',      r:267, pr:'$15.25',feat:'ISO 11607 sterile barrier',           s:['ISO 11607','Sterile barrier','Peel-open design'],          f:false,t:false},
+          {e:'❄️',n:'Temperature Controlled Packaging',d:'Advanced thermal packaging for sensitive pharmaceutical and food products.',cat:'Specialty',    ind:'Cold Chain',   r:156, pr:'$45.99',feat:'48hr 2-8°C maintenance',              s:['Maintains 2-8°C','48+ hour duration','Data logging'],     f:false,t:true},
+          {e:'🔬',n:'Clean Room Packaging',            d:'Sterile packaging for clean room environments.',                          cat:'Specialty',       ind:'Semiconductor',r:234, pr:'$12.50',feat:'ISO Class 5 particle-free',           s:['ISO Class 5','Particle-free','Sterile'],                   f:false,t:false},
+          {e:'🌱',n:'Eco-Friendly Packaging',          d:'100% biodegradable packaging solutions for sustainable operations.',      cat:'Specialty',       ind:'Sustainable',  r:1456,pr:'$5.25', feat:'90-day biodegradable',                 s:['100% biodegradable','90-day breakdown','Compostable'],    f:false,t:true}
+        ];
+
+        /* ── Build and inject rich product cards into panels ──────────── */
+        function buildPcard(idx) {
+          var p = P[idx];
+          var h = '<div class="pcard">';
+          if (p.t) h += '<span class="pcard-trending">Trending</span>';
+          h += '<div class="pcard-emoji">' + p.e + '</div>';
+          h += '<div class="pcard-name">' + p.n + '</div>';
+          h += '<div class="pcard-desc">' + p.d + '</div>';
+          h += '<div class="pcard-tags"><span class="pcard-tag">' + p.cat + '</span><span class="pcard-tag">' + p.ind + '</span></div>';
+          h += '<div class="pcard-feature">' + p.feat + '</div>';
+          h += '<div class="pcard-meta">';
+          h += '<span class="pcard-rating">&#9733; (' + p.r.toLocaleString() + ')</span>';
+          h += '<span class="pcard-price">' + p.pr + '</span>';
+          h += '</div>';
+          h += '<div class="pcard-specs">';
+          p.s.forEach(function(sp){ h += '<span class="pcard-spec">' + sp + '</span>'; });
+          h += '</div>';
+          h += '<div class="pcard-footer">';
+          h += '<span class="pcard-stock">In Stock</span>';
+          h += '<button class="pcard-view-btn" data-product="' + idx + '" type="button">View Details</button>';
+          h += '</div></div>';
+          return h;
+        }
+
+        var panels = [
+          [0,1,2,3,4,5,6,7],
+          [8,9,10,11,12,13],
+          [14,15,16,17,18,19],
+          [20,21,22,23,24,25,26],
+          [27,28,29,30,31,32],
+          [33,34,35,36,37,38,39]
+        ];
+        panels.forEach(function(idxArr, pi) {
+          var panel = document.querySelector('.cat-products[data-panel="' + pi + '"]');
+          if (!panel) return;
+          panel.innerHTML = idxArr.map(buildPcard).join('');
+        });
+
+        /* ── Product sub-popup ─────────────────────────────────────────── */
+        var pPopup = document.getElementById('product-popup');
+        var pClose = document.getElementById('product-popup-close');
+        var pBody  = document.getElementById('product-popup-body');
+
+        function openProductPopup(idx) {
+          var p = P[idx]; if (!p || !pPopup) return;
+          var html = '<p class="product-popup-name">' + p.n + '</p>';
+          html += '<p class="product-popup-desc">' + p.d + '</p>';
+          html += '<ul class="product-popup-specs">';
+          p.s.forEach(function(s){ html += '<li>' + s + '</li>'; });
+          html += '</ul><div class="product-popup-badges">';
+          html += '<span class="badge-stock">● In Stock</span>';
+          if (p.f) html += '<span class="badge-featured">★ Featured Solution</span>';
+          html += '</div>';
+          pBody.innerHTML = html;
+          pPopup.style.display = 'flex';
+        }
+
+        function closeProductPopup() { if (pPopup) pPopup.style.display = 'none'; }
+
+        if (pClose) pClose.addEventListener('click', closeProductPopup);
+        if (pPopup) pPopup.addEventListener('click', function(e){ if (e.target === pPopup) closeProductPopup(); });
+
+        /* ── Escape: close sub-popup first, then main modal ───────────── */
+        document.addEventListener('keydown', function(e) {
+          if (e.key !== 'Escape') return;
+          if (pPopup && pPopup.style.display !== 'none') { closeProductPopup(); return; }
+          if (modal && modal.classList.contains('open')) closeProductsModal();
+        });
+
+        /* ── Glass icon tab switching ──────────────────────────────────── */
+        var iconBtns  = document.querySelectorAll('.gicon-btn');
+        var catPanels = document.querySelectorAll('.cat-products');
+
+        function switchCat(cat) {
+          iconBtns.forEach(function(b){ b.classList.remove('active'); });
+          catPanels.forEach(function(p){ p.classList.remove('visible'); });
+          var ib = document.querySelector('.gicon-btn[data-cat="' + cat + '"]');
+          var cp = document.querySelector('.cat-products[data-panel="' + cat + '"]');
+          if (ib) ib.classList.add('active');
+          if (cp) cp.classList.add('visible');
+        }
+
+        iconBtns.forEach(function(btn){
+          btn.addEventListener('click', function(){ switchCat(btn.dataset.cat); });
+        });
+
+        /* ── Product button & featured chip clicks ─────────────────────── */
+        document.querySelectorAll('.product-btn, .pmod-feat-chip').forEach(function(btn){
+          btn.addEventListener('click', function(){
+            openProductPopup(parseInt(btn.dataset.product, 10));
+          });
+        });
+
+        /* ── Industry chip → switch to that category tab ──────────────── */
+        document.querySelectorAll('.pmod-ind-chip').forEach(function(btn){
+          btn.addEventListener('click', function(){
+            switchCat(btn.dataset.industry);
+            var overlay = document.querySelector('.products-modal-overlay');
+            if (overlay) overlay.scrollTop = 0;
+          });
+        });
+
+      })();
+    </script>
+  </body>
+</html>

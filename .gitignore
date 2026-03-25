@@ -1,0 +1,4 @@
+*.exe
+*.msi
+node-v*.msi
+VSCodeUserSetup*.exe

@@ -30,17 +30,12 @@
 
       body {
         background:
-          radial-gradient(ellipse 120% 55% at 0%   0%,   rgba(196,145,74, 0.20) 0%, transparent 70%),
-          radial-gradient(ellipse 110% 50% at 100% 0%,   rgba(62, 88, 44, 0.18) 0%, transparent 68%),
-          radial-gradient(ellipse 120% 55% at 0%   100%, rgba(72,100,54,  0.17) 0%, transparent 70%),
-          radial-gradient(ellipse 110% 50% at 100% 100%, rgba(221,180,100,0.16) 0%, transparent 68%),
-          radial-gradient(ellipse 90%  60% at 50%  22%,  rgba(88,118,58,  0.12) 0%, transparent 72%),
-          radial-gradient(ellipse 90%  60% at 50%  78%,  rgba(196,145,74, 0.12) 0%, transparent 72%),
-          radial-gradient(ellipse 70%  80% at 18%  50%,  rgba(58, 82, 42, 0.14) 0%, transparent 68%),
-          radial-gradient(ellipse 70%  80% at 82%  50%,  rgba(210,168,88, 0.13) 0%, transparent 68%),
-          radial-gradient(ellipse 100% 100% at 50% 50%,  rgba(240,228,195,0.22) 0%, transparent 75%),
+          radial-gradient(ellipse 100% 60% at 0%   0%,   rgba(196,145,74, 0.18) 0%, transparent 65%),
+          radial-gradient(ellipse 100% 60% at 100% 0%,   rgba(62, 88, 44, 0.15) 0%, transparent 65%),
+          radial-gradient(ellipse 100% 60% at 0%   100%, rgba(72,100,54,  0.14) 0%, transparent 65%),
+          radial-gradient(ellipse 100% 60% at 100% 100%, rgba(221,180,100,0.14) 0%, transparent 65%),
           #f6f4ee !important;
-        background-attachment: fixed !important;
+        /* No background-attachment:fixed — it disables GPU compositing and causes lag */
       }
 
       /* ── Wipe every section/container background to transparent ─────────
@@ -390,60 +385,61 @@
         animation-duration: 8.0s; animation-delay: -5.9s;
       }
 
-      /* All content above the fixed bg layer */
-      .site-header, main, .spotlight-overlay {
+      /* All content above the fixed bg layer — keep site-header sticky! */
+      main, .spotlight-overlay {
         position: relative;
         z-index: 1;
       }
 
       @media (max-width: 720px) {
-        /* Hide all, then selectively show 6 spread evenly */
-        .hero-box-img { display: none; }
+        /* Stop ALL animations on mobile — biggest perf fix */
+        .hero-box-img {
+          animation: none !important;
+          display: none;
+        }
 
-        /* Top row — left & right */
+        /* Show 6 boxes in a true 2-column scatter across full width */
         .hero-box-img:nth-child(1) {
-          display: block;
-          width: clamp(110px, 36vw, 175px);
-          top: 4vh; left: 1%;
-          --box-rot: -10deg; --box-opacity: 0.50; --box-travel: -12px;
-          animation-duration: 7s;
+          display: block; width: 38vw;
+          top: 3vh;  left: 2%;
+          --box-rot: -10deg; --box-opacity: 0.48;
+          transform: rotate(-10deg);
         }
-        .hero-box-img:nth-child(3) {
-          display: block;
-          width: clamp(110px, 34vw, 165px);
-          top: 3vh; left: 54%;
-          --box-rot: 11deg; --box-opacity: 0.48; --box-travel: -10px;
-          animation-duration: 8s;
+        .hero-box-img:nth-child(2) {
+          display: block; width: 36vw;
+          top: 2vh;  left: 56%;
+          --box-rot: 12deg; --box-opacity: 0.45;
+          transform: rotate(12deg);
         }
-        /* Mid row — left & right */
+        .hero-box-img:nth-child(4) {
+          display: block; width: 34vw;
+          top: 46vh; left: 4%;
+          --box-rot: 8deg; --box-opacity: 0.36;
+          transform: rotate(8deg);
+        }
         .hero-box-img:nth-child(5) {
-          display: block;
-          width: clamp(100px, 32vw, 155px);
-          top: 48vh; left: 2%;
-          --box-rot: 8deg; --box-opacity: 0.38; --box-travel: -9px;
-          animation-duration: 9s;
+          display: block; width: 33vw;
+          top: 44vh; left: 57%;
+          --box-rot: -9deg; --box-opacity: 0.34;
+          transform: rotate(-9deg);
         }
-        .hero-box-img:nth-child(6) {
-          display: block;
-          width: clamp(100px, 30vw, 150px);
-          top: 46vh; left: 56%;
-          --box-rot: -9deg; --box-opacity: 0.36; --box-travel: -8px;
-          animation-duration: 8.5s;
-        }
-        /* Bottom row — left & right */
         .hero-box-img:nth-child(9) {
-          display: block;
-          width: clamp(110px, 34vw, 165px);
-          top: 80vh; left: 1%;
-          --box-rot: -12deg; --box-opacity: 0.45; --box-travel: -11px;
-          animation-duration: 7.5s;
+          display: block; width: 36vw;
+          top: 80vh; left: 2%;
+          --box-rot: -12deg; --box-opacity: 0.42;
+          transform: rotate(-12deg);
         }
         .hero-box-img:nth-child(10) {
-          display: block;
-          width: clamp(105px, 32vw, 158px);
-          top: 79vh; left: 55%;
-          --box-rot: 13deg; --box-opacity: 0.42; --box-travel: -10px;
-          animation-duration: 9.5s;
+          display: block; width: 35vw;
+          top: 79vh; left: 56%;
+          --box-rot: 11deg; --box-opacity: 0.40;
+          transform: rotate(11deg);
+        }
+
+        /* Also kill backdrop-filter on mobile nav — very expensive */
+        .site-header .nav-links {
+          backdrop-filter: none !important;
+          -webkit-backdrop-filter: none !important;
         }
       }
 

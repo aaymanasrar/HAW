@@ -22,10 +22,22 @@ document.addEventListener("DOMContentLoaded", () => {
       navLinks.classList.toggle("open");
     });
 
-    // Close menu when any nav link is clicked (mobile)
+    // Mobile nav: close menu then manually scroll to section
     navLinks.querySelectorAll("a").forEach((link) => {
-      link.addEventListener("click", () => {
-        navLinks.classList.remove("open");
+      link.addEventListener("click", (e) => {
+        const href = link.getAttribute("href");
+        if (href && href.startsWith("#")) {
+          e.preventDefault();
+          navLinks.classList.remove("open");
+          const target = document.getElementById(href.slice(1));
+          if (target) {
+            setTimeout(() => {
+              const headerH = document.querySelector(".site-header")?.offsetHeight || 68;
+              const top = target.getBoundingClientRect().top + window.scrollY - headerH;
+              window.scrollTo({ top, behavior: "smooth" });
+            }, 150); // wait for menu to close first
+          }
+        }
       });
     });
   }

@@ -273,13 +273,17 @@
       #quote {
         scroll-margin-top: 80px;
       }
+
+      /* Isolate heavy sections so their repaints don't cascade to the whole page */
+      #products, #services, #about, #contact, #quote {
+        contain: layout style;
+      }
       @media (max-width: 720px) {
         #services, #products, #about, #contact, #quote {
           scroll-margin-top: 72px;
         }
       }
       .hero-fade-wrap {
-        will-change: opacity, transform;
         transition: opacity 0.05s linear, transform 0.05s linear;
       }
 
@@ -296,7 +300,6 @@
         position: absolute;
         opacity: 0;
         animation: heroBoxFloat linear infinite both;
-        will-change: transform;
         transform-origin: center center;
         transition: opacity 1.4s ease;
       }
@@ -2104,14 +2107,19 @@
           el.classList.remove('border-glow-card');
         });
 
-        /* ── Spotlight Card — apply to all cards ───────────────────────── */
+        /* ── Spotlight Card — cache rect on enter, not on every move ──────── */
         document.querySelectorAll('.card, .product, .contact-item').forEach(function (card) {
           card.classList.add('card-spotlight');
+          var rect = null;
+          card.addEventListener('mouseenter', function () {
+            rect = card.getBoundingClientRect();
+          }, { passive: true });
           card.addEventListener('mousemove', function (e) {
-            var r = card.getBoundingClientRect();
-            card.style.setProperty('--mouse-x', (e.clientX - r.left) + 'px');
-            card.style.setProperty('--mouse-y', (e.clientY - r.top)  + 'px');
-          });
+            if (!rect) return;
+            card.style.setProperty('--mouse-x', (e.clientX - rect.left) + 'px');
+            card.style.setProperty('--mouse-y', (e.clientY - rect.top)  + 'px');
+          }, { passive: true });
+          card.addEventListener('mouseleave', function () { rect = null; }, { passive: true });
         });
 
         /* ── Products modal open / close ──────────────────────────────── */
@@ -2338,11 +2346,14 @@
             openProductsModal();
             openProductPopup(parseInt(card.dataset.openProduct, 10));
           });
+          var fRect = null;
+          card.addEventListener('mouseenter', function () { fRect = card.getBoundingClientRect(); }, { passive: true });
           card.addEventListener('mousemove', function(e) {
-            var r = card.getBoundingClientRect();
-            card.style.setProperty('--mouse-x', (e.clientX - r.left) + 'px');
-            card.style.setProperty('--mouse-y', (e.clientY - r.top) + 'px');
-          });
+            if (!fRect) return;
+            card.style.setProperty('--mouse-x', (e.clientX - fRect.left) + 'px');
+            card.style.setProperty('--mouse-y', (e.clientY - fRect.top) + 'px');
+          }, { passive: true });
+          card.addEventListener('mouseleave', function () { fRect = null; }, { passive: true });
         });
 
         /* ── Industry cards on main section → open modal with ind filter ── */

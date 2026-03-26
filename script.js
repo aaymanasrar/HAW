@@ -1,4 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
+  // ── Init Lucide icons ─────────────────────────────────────────────────
+  if (window.lucide) lucide.createIcons();
+
   // ── Fade-in hero box images once loaded ───────────────────────────────
   document.querySelectorAll(".hero-box-img").forEach((img) => {
     const reveal = () => img.classList.add("loaded");

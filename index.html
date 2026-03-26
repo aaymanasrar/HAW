@@ -15,6 +15,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./styles.css" />
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
 
     <!-- ─── Global smooth scroll + unified background ────────────────────── -->
     <style>
@@ -831,10 +832,13 @@
       }
 
       .pcard-emoji {
-        font-size: 1.25rem;
-        line-height: 1;
-        margin-bottom: 0.05rem;
+        width: 22px;
+        height: 22px;
+        margin-bottom: 0.15rem;
+        color: var(--accent);
+        flex-shrink: 0;
       }
+      .pcard-emoji svg { width: 22px; height: 22px; stroke: currentColor; }
 
       .pcard-name {
         font-weight: 600;
@@ -1142,9 +1146,9 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: 1.3rem;
         transition: background 0.25s;
         box-shadow: inset 0 1px 0 rgba(255,255,255,0.6);
+        color: var(--accent);
       }
       .featured-card:hover .featured-card-icon-front { background: hsla(0,0%,100%,0.42); }
       .featured-card-badge {
@@ -1217,9 +1221,9 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: 1.15rem;
         background: rgba(196,145,74,0.1);
         border: 1px solid rgba(196,145,74,0.18);
+        color: var(--accent);
       }
       .industry-card-name {
         font-weight: 600;
@@ -1602,7 +1606,7 @@
               <div class="featured-card" data-open-product="3">
                 <div class="featured-card-icon-wrap">
                   <span class="featured-card-icon-back" style="background:linear-gradient(135deg,hsla(36,45%,88%,0.72),hsla(34,28%,76%,0.58))"></span>
-                  <span class="featured-card-icon-front">📦</span>
+                  <span class="featured-card-icon-front"><i data-lucide="box" style="width:22px;height:22px"></i></span>
                 </div>
                 <span class="featured-card-badge">★ Featured</span>
                 <div class="featured-card-name">Wrap Around Boxes</div>
@@ -1612,7 +1616,7 @@
               <div class="featured-card" data-open-product="5">
                 <div class="featured-card-icon-wrap">
                   <span class="featured-card-icon-back" style="background:linear-gradient(135deg,hsla(140,38%,84%,0.72),hsla(128,26%,74%,0.58))"></span>
-                  <span class="featured-card-icon-front">🌿</span>
+                  <span class="featured-card-icon-front"><i data-lucide="leaf" style="width:22px;height:22px"></i></span>
                 </div>
                 <span class="featured-card-badge">★ Featured</span>
                 <div class="featured-card-name">Telescopic Produce Boxes</div>
@@ -1622,7 +1626,7 @@
               <div class="featured-card" data-open-product="20">
                 <div class="featured-card-icon-wrap">
                   <span class="featured-card-icon-back" style="background:linear-gradient(135deg,hsla(0,42%,88%,0.72),hsla(350,30%,78%,0.58))"></span>
-                  <span class="featured-card-icon-front">🍕</span>
+                  <span class="featured-card-icon-front"><i data-lucide="utensils" style="width:22px;height:22px"></i></span>
                 </div>
                 <span class="featured-card-badge">★ Featured</span>
                 <div class="featured-card-name">Double-Decker Pizza Boxes</div>
@@ -1632,7 +1636,7 @@
               <div class="featured-card" data-open-product="39">
                 <div class="featured-card-icon-wrap">
                   <span class="featured-card-icon-back" style="background:linear-gradient(135deg,hsla(200,38%,87%,0.72),hsla(210,26%,77%,0.58))"></span>
-                  <span class="featured-card-icon-front">🌱</span>
+                  <span class="featured-card-icon-front"><i data-lucide="sprout" style="width:22px;height:22px"></i></span>
                 </div>
                 <span class="featured-card-badge">★ Featured</span>
                 <div class="featured-card-name">Eco-Friendly Packaging</div>
@@ -1650,42 +1654,42 @@
             </div>
             <div class="industry-grid">
               <div class="industry-card" data-open-industry="Ecommerce">
-                <div class="industry-card-icon">🛒</div>
+                <div class="industry-card-icon"><i data-lucide="shopping-cart" style="width:20px;height:20px"></i></div>
                 <div>
                   <div class="industry-card-name">E-commerce</div>
                   <div class="industry-card-desc">Mailers, protective packaging, branded solutions</div>
                 </div>
               </div>
               <div class="industry-card" data-open-industry="Food">
-                <div class="industry-card-icon">🍽️</div>
+                <div class="industry-card-icon"><i data-lucide="utensils" style="width:20px;height:20px"></i></div>
                 <div>
                   <div class="industry-card-name">Food &amp; Beverage</div>
                   <div class="industry-card-desc">Food-grade, insulated, produce containers</div>
                 </div>
               </div>
               <div class="industry-card" data-open-industry="Electronics">
-                <div class="industry-card-icon">⚡</div>
+                <div class="industry-card-icon"><i data-lucide="zap" style="width:20px;height:20px"></i></div>
                 <div>
                   <div class="industry-card-name">Electronics</div>
                   <div class="industry-card-desc">ESD bags, custom foam, anti-static solutions</div>
                 </div>
               </div>
               <div class="industry-card" data-open-industry="Pharma">
-                <div class="industry-card-icon">💊</div>
+                <div class="industry-card-icon"><i data-lucide="pill" style="width:20px;height:20px"></i></div>
                 <div>
                   <div class="industry-card-name">Pharmaceuticals</div>
                   <div class="industry-card-desc">Tamper-evident, child-resistant, FDA compliant</div>
                 </div>
               </div>
               <div class="industry-card" data-open-industry="Agriculture">
-                <div class="industry-card-icon">🌾</div>
+                <div class="industry-card-icon"><i data-lucide="wheat" style="width:20px;height:20px"></i></div>
                 <div>
                   <div class="industry-card-name">Agriculture</div>
                   <div class="industry-card-desc">Produce boxes, ventilated, moisture-resistant</div>
                 </div>
               </div>
               <div class="industry-card" data-open-industry="Industrial">
-                <div class="industry-card-icon">🏭</div>
+                <div class="industry-card-icon"><i data-lucide="factory" style="width:20px;height:20px"></i></div>
                 <div>
                   <div class="industry-card-name">Industrial</div>
                   <div class="industry-card-desc">Stretch wrap, strapping, pallet covers, heavy-duty</div>
@@ -1847,12 +1851,12 @@
             <p class="pmod-filter-label">Product Category</p>
             <div class="pmod-filter-row" id="cat-filter-row">
               <button class="pmod-filter-chip active" data-cat-filter="all" type="button">All</button>
-              <button class="pmod-filter-chip" data-cat-filter="Corrugated" type="button">📦 Corrugated</button>
-              <button class="pmod-filter-chip" data-cat-filter="Protective" type="button">🛡️ Protective</button>
-              <button class="pmod-filter-chip" data-cat-filter="Industrial" type="button">🏗️ Industrial</button>
-              <button class="pmod-filter-chip" data-cat-filter="Food" type="button">🍽️ Food</button>
-              <button class="pmod-filter-chip" data-cat-filter="Retail" type="button">🛍️ Retail</button>
-              <button class="pmod-filter-chip" data-cat-filter="Specialty" type="button">✨ Specialty</button>
+              <button class="pmod-filter-chip" data-cat-filter="Corrugated" type="button"><i data-lucide="box" style="width:13px;height:13px"></i> Corrugated</button>
+              <button class="pmod-filter-chip" data-cat-filter="Protective" type="button"><i data-lucide="shield" style="width:13px;height:13px"></i> Protective</button>
+              <button class="pmod-filter-chip" data-cat-filter="Industrial" type="button"><i data-lucide="hard-hat" style="width:13px;height:13px"></i> Industrial</button>
+              <button class="pmod-filter-chip" data-cat-filter="Food" type="button"><i data-lucide="utensils" style="width:13px;height:13px"></i> Food</button>
+              <button class="pmod-filter-chip" data-cat-filter="Retail" type="button"><i data-lucide="shopping-bag" style="width:13px;height:13px"></i> Retail</button>
+              <button class="pmod-filter-chip" data-cat-filter="Specialty" type="button"><i data-lucide="sparkles" style="width:13px;height:13px"></i> Specialty</button>
             </div>
           </div>
         </div>
@@ -2142,58 +2146,58 @@
         /* ── Product data — 40 products ────────────────────────────────── */
         var P = [
           /* 0–7  Corrugated */
-          {e:'📦',n:'Single Wall Corrugated Boxes',    d:'Lightweight yet durable boxes perfect for shipping and storage.',            cat:'Corrugated Boxes',ind:'Ecommerce',    r:2847,pr:'$1.25', feat:'Available in 50+ standard sizes',      s:['3mm thickness','32 ECT rating','Recyclable'],              f:false,t:false},
-          {e:'📦',n:'Double Wall Corrugated Boxes',    d:'Enhanced strength for heavier items and long-distance shipping.',            cat:'Corrugated Boxes',ind:'Logistics',    r:1923,pr:'$2.15', feat:'Up to 65 lbs capacity',                s:['6mm thickness','48 ECT rating','Heavy duty'],              f:false,t:false},
-          {e:'📦',n:'Triple Wall Corrugated Boxes',    d:'Maximum protection for industrial and heavy-duty applications.',             cat:'Corrugated Boxes',ind:'Industrial',   r:856, pr:'$4.85', feat:'Up to 125 lbs capacity',               s:['15mm thickness','71 ECT rating','Industrial grade'],       f:false,t:true},
-          {e:'📦',n:'Wrap Around Boxes',               d:'Adjustable boxes that wrap around products for a perfect fit.',              cat:'Corrugated Boxes',ind:'Ecommerce',    r:1245,pr:'$3.50', feat:'No void fill required',                s:['Adjustable sizing','No void fill','Cost effective'],       f:true, t:true},
-          {e:'✂️',n:'Die Cut Boxes',                   d:'Precision-cut boxes designed for specific product dimensions.',              cat:'Corrugated Boxes',ind:'Retail',       r:967, pr:'$2.75', feat:'Precision custom sizing',              s:['Custom tooling','Exact fit','No tape required'],           f:false,t:false},
-          {e:'🌿',n:'Telescopic Boxes for Fresh Produce',d:'Ventilated boxes designed specifically for fresh fruits and vegetables.',  cat:'Corrugated Boxes',ind:'Agriculture',  r:567, pr:'$5.15', feat:'Ventilated moisture resistant',        s:['Stackable design','Moisture resistant','Ventilated'],      f:true, t:true},
-          {e:'🗂️',n:'Archive Storage Boxes',           d:'Long-term storage boxes for documents and files.',                          cat:'Storage Boxes',   ind:'Office',       r:1456,pr:'$8.99', feat:'Long-term document storage',           s:['Acid-free','Reinforced corners','Letter/legal size'],      f:false,t:false},
-          {e:'🚚',n:'Moving Boxes',                    d:'Heavy-duty boxes for household and commercial moving.',                     cat:'Moving Boxes',    ind:'Residential',  r:2134,pr:'$3.25', feat:'Extra strength with handles',          s:['Multiple sizes','Grip handles','Extra strength'],          f:false,t:true},
+          {e:'box',n:'Single Wall Corrugated Boxes',    d:'Lightweight yet durable boxes perfect for shipping and storage.',            cat:'Corrugated Boxes',ind:'Ecommerce',    r:2847,pr:'$1.25', feat:'Available in 50+ standard sizes',      s:['3mm thickness','32 ECT rating','Recyclable'],              f:false,t:false},
+          {e:'box',n:'Double Wall Corrugated Boxes',    d:'Enhanced strength for heavier items and long-distance shipping.',            cat:'Corrugated Boxes',ind:'Logistics',    r:1923,pr:'$2.15', feat:'Up to 65 lbs capacity',                s:['6mm thickness','48 ECT rating','Heavy duty'],              f:false,t:false},
+          {e:'box',n:'Triple Wall Corrugated Boxes',    d:'Maximum protection for industrial and heavy-duty applications.',             cat:'Corrugated Boxes',ind:'Industrial',   r:856, pr:'$4.85', feat:'Up to 125 lbs capacity',               s:['15mm thickness','71 ECT rating','Industrial grade'],       f:false,t:true},
+          {e:'box',n:'Wrap Around Boxes',               d:'Adjustable boxes that wrap around products for a perfect fit.',              cat:'Corrugated Boxes',ind:'Ecommerce',    r:1245,pr:'$3.50', feat:'No void fill required',                s:['Adjustable sizing','No void fill','Cost effective'],       f:true, t:true},
+          {e:'scissors',n:'Die Cut Boxes',              d:'Precision-cut boxes designed for specific product dimensions.',              cat:'Corrugated Boxes',ind:'Retail',       r:967, pr:'$2.75', feat:'Precision custom sizing',              s:['Custom tooling','Exact fit','No tape required'],           f:false,t:false},
+          {e:'leaf',n:'Telescopic Boxes for Fresh Produce',d:'Ventilated boxes designed specifically for fresh fruits and vegetables.',cat:'Corrugated Boxes',ind:'Agriculture',  r:567, pr:'$5.15', feat:'Ventilated moisture resistant',        s:['Stackable design','Moisture resistant','Ventilated'],      f:true, t:true},
+          {e:'archive',n:'Archive Storage Boxes',       d:'Long-term storage boxes for documents and files.',                          cat:'Storage Boxes',   ind:'Office',       r:1456,pr:'$8.99', feat:'Long-term document storage',           s:['Acid-free','Reinforced corners','Letter/legal size'],      f:false,t:false},
+          {e:'truck',n:'Moving Boxes',                  d:'Heavy-duty boxes for household and commercial moving.',                     cat:'Moving Boxes',    ind:'Residential',  r:2134,pr:'$3.25', feat:'Extra strength with handles',          s:['Multiple sizes','Grip handles','Extra strength'],          f:false,t:true},
           /* 8–13 Protective */
-          {e:'🫧',n:'Bubble Wrap Rolls',               d:'Premium bubble wrap for cushioning and protection of fragile items.',       cat:'Protective',      ind:'Electronics',  r:3421,pr:'$0.89', feat:'Premium cushioning rolls',             s:['3 widths available','Anti-static','Perforated'],           f:false,t:true},
-          {e:'🧱',n:'Foam Packaging Inserts',          d:'Custom-cut foam inserts for fragile item protection.',                      cat:'Protective',      ind:'Electronics',  r:756, pr:'$12.99',feat:'Custom-cut protection',              s:['Custom cutting','Polyethylene/PU','Reusable'],             f:false,t:false},
-          {e:'💨',n:'Air Pillows',                     d:'Inflatable cushioning for void fill and lightweight protection.',           cat:'Protective',      ind:'Ecommerce',    r:2134,pr:'$0.15', feat:'Lightweight void fill',                s:['Biodegradable options','Multiple sizes','Lightweight'],    f:false,t:true},
-          {e:'🌾',n:'Packing Peanuts',                 d:'Loose fill packaging for irregular shaped items.',                         cat:'Protective',      ind:'Fragile Goods',r:1567,pr:'$24.99',feat:'Irregular shape coverage',            s:['14 cu ft/bag','Biodegradable','Anti-static'],              f:false,t:false},
-          {e:'📄',n:'Kraft Paper Void Fill',           d:'Eco-friendly paper cushioning and void fill.',                             cat:'Protective',      ind:'Ecommerce',    r:892, pr:'$18.50',feat:'Eco-friendly cushioning',             s:['100% recyclable','Crinkle cut','Natural kraft'],           f:false,t:true},
-          {e:'📐',n:'Corner Protectors',               d:'Cardboard corner protectors for shipping and storage.',                    cat:'Protective',      ind:'Furniture',    r:1456,pr:'$1.25', feat:'Edge damage prevention',               s:['Various sizes','Stackable','Recyclable'],                  f:false,t:false},
+          {e:'layers',n:'Bubble Wrap Rolls',            d:'Premium bubble wrap for cushioning and protection of fragile items.',       cat:'Protective',      ind:'Electronics',  r:3421,pr:'$0.89', feat:'Premium cushioning rolls',             s:['3 widths available','Anti-static','Perforated'],           f:false,t:true},
+          {e:'package-open',n:'Foam Packaging Inserts', d:'Custom-cut foam inserts for fragile item protection.',                      cat:'Protective',      ind:'Electronics',  r:756, pr:'$12.99',feat:'Custom-cut protection',              s:['Custom cutting','Polyethylene/PU','Reusable'],             f:false,t:false},
+          {e:'wind',n:'Air Pillows',                    d:'Inflatable cushioning for void fill and lightweight protection.',           cat:'Protective',      ind:'Ecommerce',    r:2134,pr:'$0.15', feat:'Lightweight void fill',                s:['Biodegradable options','Multiple sizes','Lightweight'],    f:false,t:true},
+          {e:'wheat',n:'Packing Peanuts',               d:'Loose fill packaging for irregular shaped items.',                         cat:'Protective',      ind:'Fragile Goods',r:1567,pr:'$24.99',feat:'Irregular shape coverage',            s:['14 cu ft/bag','Biodegradable','Anti-static'],              f:false,t:false},
+          {e:'file-text',n:'Kraft Paper Void Fill',     d:'Eco-friendly paper cushioning and void fill.',                             cat:'Protective',      ind:'Ecommerce',    r:892, pr:'$18.50',feat:'Eco-friendly cushioning',             s:['100% recyclable','Crinkle cut','Natural kraft'],           f:false,t:true},
+          {e:'ruler',n:'Corner Protectors',             d:'Cardboard corner protectors for shipping and storage.',                    cat:'Protective',      ind:'Furniture',    r:1456,pr:'$1.25', feat:'Edge damage prevention',               s:['Various sizes','Stackable','Recyclable'],                  f:false,t:false},
           /* 14–19 Industrial */
-          {e:'🌀',n:'Stretch Wrap Film',               d:'Industrial strength film for pallet wrapping and bundling.',               cat:'Industrial',      ind:'Warehousing',  r:1234,pr:'$45.99',feat:'Superior pallet wrapping',            s:['18"/20" widths','1,500 ft length','UV resistant'],         f:false,t:true},
-          {e:'🔥',n:'Shrink Wrap Film',                d:'Heat-activated film for product bundling and protection.',                 cat:'Industrial',      ind:'Manufacturing',r:987, pr:'$38.75',feat:'Tamper-evident bundling',             s:['Multiple gauges','Crystal clear','Heat activated'],        f:false,t:false},
-          {e:'⛓️',n:'Steel Strapping',                 d:'Heavy-duty steel strapping for industrial applications.',                  cat:'Industrial',      ind:'Heavy Industry',r:456,pr:'$125.00',feat:'Maximum tensile strength',           s:['High tensile','Corrosion resistant','Reusable'],           f:false,t:false},
-          {e:'🔗',n:'Plastic Strapping',               d:'Lightweight alternative to steel strapping.',                             cat:'Industrial',      ind:'Logistics',    r:723, pr:'$65.50',feat:'Lightweight strong option',            s:['PP/polyester','Weather resistant','Cost effective'],       f:false,t:true},
-          {e:'📌',n:'Industrial Tape',                 d:'Heavy-duty tape for industrial packaging applications.',                   cat:'Industrial',      ind:'Manufacturing',r:1567,pr:'$8.99', feat:'High adhesion all-weather',            s:['Acrylic/hot-melt','High adhesion','Weather resistant'],    f:false,t:true},
-          {e:'🛡️',n:'Pallet Covers',                   d:'Protective covers for palletised goods.',                                  cat:'Industrial',      ind:'Warehousing',  r:678, pr:'$15.75',feat:'Full UV and weather protection',       s:['Custom sizes','UV protection','Weather resistant'],        f:false,t:false},
+          {e:'rotate-cw',n:'Stretch Wrap Film',          d:'Industrial strength film for pallet wrapping and bundling.',               cat:'Industrial',      ind:'Warehousing',  r:1234,pr:'$45.99',feat:'Superior pallet wrapping',            s:['18"/20" widths','1,500 ft length','UV resistant'],         f:false,t:true},
+          {e:'flame',n:'Shrink Wrap Film',              d:'Heat-activated film for product bundling and protection.',                 cat:'Industrial',      ind:'Manufacturing',r:987, pr:'$38.75',feat:'Tamper-evident bundling',             s:['Multiple gauges','Crystal clear','Heat activated'],        f:false,t:false},
+          {e:'link',n:'Steel Strapping',                d:'Heavy-duty steel strapping for industrial applications.',                  cat:'Industrial',      ind:'Heavy Industry',r:456,pr:'$125.00',feat:'Maximum tensile strength',           s:['High tensile','Corrosion resistant','Reusable'],           f:false,t:false},
+          {e:'link-2',n:'Plastic Strapping',            d:'Lightweight alternative to steel strapping.',                             cat:'Industrial',      ind:'Logistics',    r:723, pr:'$65.50',feat:'Lightweight strong option',            s:['PP/polyester','Weather resistant','Cost effective'],       f:false,t:true},
+          {e:'tag',n:'Industrial Tape',                 d:'Heavy-duty tape for industrial packaging applications.',                   cat:'Industrial',      ind:'Manufacturing',r:1567,pr:'$8.99', feat:'High adhesion all-weather',            s:['Acrylic/hot-melt','High adhesion','Weather resistant'],    f:false,t:true},
+          {e:'shield',n:'Pallet Covers',                d:'Protective covers for palletised goods.',                                  cat:'Industrial',      ind:'Warehousing',  r:678, pr:'$15.75',feat:'Full UV and weather protection',       s:['Custom sizes','UV protection','Weather resistant'],        f:false,t:false},
           /* 20–26 Food */
-          {e:'🍕',n:'Double-Decker Pizza Boxes',       d:'Innovative two-level pizza delivery boxes — fits two large pizzas efficiently.',cat:'Food Packaging',ind:'Restaurants',r:892,pr:'$2.85',feat:'Dual compartment design',             s:['Heat retention','Grease resistant','Two compartments'],    f:true, t:true},
-          {e:'🛵',n:'Food Delivery Boxes',             d:'Insulated boxes for hot food delivery with extended temperature retention.',cat:'Food Packaging',  ind:'Delivery',    r:1834,pr:'$3.15', feat:'2-hour temperature retention',         s:['Insulated walls','Leak-proof','Stackable'],                f:false,t:true},
-          {e:'🥡',n:'Takeaway Containers',             d:'Microwave-safe containers for food takeaway in various sizes.',           cat:'Food Packaging',  ind:'Restaurants',  r:3421,pr:'$0.95', feat:'Microwave-safe stackable',             s:['8 oz to 32 oz','Microwave safe','Leak resistant'],         f:false,t:true},
-          {e:'🧁',n:'Bakery Boxes',                    d:'Specialised boxes for cakes, pastries, and baked goods.',                 cat:'Food Packaging',  ind:'Bakeries',     r:1234,pr:'$1.85', feat:'Window display options',               s:['Square/rectangular','Window options','Grease resistant'],  f:false,t:false},
-          {e:'🌾',n:'Produce Boxes',                   d:'Wax-coated boxes for fresh fruits and vegetables.',                       cat:'Food Packaging',  ind:'Agriculture',  r:987, pr:'$3.15', feat:'Moisture-resistant ventilated',        s:['Wax-coated','Moisture resistant','Ventilated'],            f:false,t:false},
-          {e:'🥤',n:'Beverage Carriers',               d:'Secure carriers for bottles and cans in multiple configurations.',        cat:'Food Packaging',  ind:'Beverages',    r:1247,pr:'$2.45', feat:'Multi-pack configurations',            s:['2/4/6/12-pack','Secure grip','Recyclable'],                f:false,t:true},
-          {e:'🧊',n:'Insulated Shipping Boxes',        d:'Temperature-controlled packaging for perishables.',                       cat:'Food Packaging',  ind:'Cold Chain',   r:634, pr:'$8.99', feat:'48hr temperature control',             s:['24-48hr control','Insulated walls','Monitoring capable'],  f:false,t:true},
+          {e:'utensils',n:'Double-Decker Pizza Boxes',  d:'Innovative two-level pizza delivery boxes — fits two large pizzas efficiently.',cat:'Food Packaging',ind:'Restaurants',r:892,pr:'$2.85',feat:'Dual compartment design',             s:['Heat retention','Grease resistant','Two compartments'],    f:true, t:true},
+          {e:'bike',n:'Food Delivery Boxes',            d:'Insulated boxes for hot food delivery with extended temperature retention.',cat:'Food Packaging',  ind:'Delivery',    r:1834,pr:'$3.15', feat:'2-hour temperature retention',         s:['Insulated walls','Leak-proof','Stackable'],                f:false,t:true},
+          {e:'package',n:'Takeaway Containers',         d:'Microwave-safe containers for food takeaway in various sizes.',           cat:'Food Packaging',  ind:'Restaurants',  r:3421,pr:'$0.95', feat:'Microwave-safe stackable',             s:['8 oz to 32 oz','Microwave safe','Leak resistant'],         f:false,t:true},
+          {e:'cake',n:'Bakery Boxes',                   d:'Specialised boxes for cakes, pastries, and baked goods.',                 cat:'Food Packaging',  ind:'Bakeries',     r:1234,pr:'$1.85', feat:'Window display options',               s:['Square/rectangular','Window options','Grease resistant'],  f:false,t:false},
+          {e:'wheat',n:'Produce Boxes',                 d:'Wax-coated boxes for fresh fruits and vegetables.',                       cat:'Food Packaging',  ind:'Agriculture',  r:987, pr:'$3.15', feat:'Moisture-resistant ventilated',        s:['Wax-coated','Moisture resistant','Ventilated'],            f:false,t:false},
+          {e:'glass-water',n:'Beverage Carriers',       d:'Secure carriers for bottles and cans in multiple configurations.',        cat:'Food Packaging',  ind:'Beverages',    r:1247,pr:'$2.45', feat:'Multi-pack configurations',            s:['2/4/6/12-pack','Secure grip','Recyclable'],                f:false,t:true},
+          {e:'snowflake',n:'Insulated Shipping Boxes',  d:'Temperature-controlled packaging for perishables.',                       cat:'Food Packaging',  ind:'Cold Chain',   r:634, pr:'$8.99', feat:'48hr temperature control',             s:['24-48hr control','Insulated walls','Monitoring capable'],  f:false,t:true},
           /* 27–32 Retail */
-          {e:'🏪',n:'Retail Display Boxes',            d:'Point-of-purchase displays for retail environments.',                     cat:'Retail',          ind:'Retail Stores',r:456, pr:'$15.50',feat:'Point-of-purchase display',           s:['Custom graphics','Easy setup','Eye-catching'],             f:false,t:true},
-          {e:'📮',n:'Mailer Boxes',                    d:'E-commerce shipping boxes with easy-open design.',                        cat:'Retail',          ind:'Ecommerce',    r:1789,pr:'$2.45', feat:'Self-locking no tape needed',          s:['Self-locking','No tape','Branded options'],                f:false,t:true},
-          {e:'🎁',n:'Gift Boxes',                      d:'Premium presentation boxes for gifts and retail.',                        cat:'Retail',          ind:'Gifting',      r:892, pr:'$4.25', feat:'Magnetic closure luxury finish',       s:['Magnetic closure','Ribbon included','Luxury finish'],      f:false,t:false},
-          {e:'💎',n:'Jewelry Boxes',                   d:'Specialised packaging for jewellery and small valuables.',                cat:'Retail',          ind:'Jewelry',      r:1345,pr:'$1.95', feat:'Velvet lined secure closure',          s:['Velvet lining','Secure closure','Elegant design'],         f:false,t:false},
-          {e:'✨',n:'Cosmetic Packaging',              d:'Elegant packaging for beauty products.',                                  cat:'Retail',          ind:'Beauty',       r:1234,pr:'$4.95', feat:'Custom luxury branding',               s:['Luxury finish','Custom colours','Magnetic closure'],       f:false,t:true},
-          {e:'👗',n:'Clothing Boxes',                  d:'Premium boxes for apparel and fashion items.',                            cat:'Retail',          ind:'Fashion',      r:987, pr:'$3.75', feat:'Flat pack brand customised',           s:['Flat pack design','Easy assembly','Brand customisation'],  f:false,t:true},
+          {e:'store',n:'Retail Display Boxes',          d:'Point-of-purchase displays for retail environments.',                     cat:'Retail',          ind:'Retail Stores',r:456, pr:'$15.50',feat:'Point-of-purchase display',           s:['Custom graphics','Easy setup','Eye-catching'],             f:false,t:true},
+          {e:'mail',n:'Mailer Boxes',                   d:'E-commerce shipping boxes with easy-open design.',                        cat:'Retail',          ind:'Ecommerce',    r:1789,pr:'$2.45', feat:'Self-locking no tape needed',          s:['Self-locking','No tape','Branded options'],                f:false,t:true},
+          {e:'gift',n:'Gift Boxes',                     d:'Premium presentation boxes for gifts and retail.',                        cat:'Retail',          ind:'Gifting',      r:892, pr:'$4.25', feat:'Magnetic closure luxury finish',       s:['Magnetic closure','Ribbon included','Luxury finish'],      f:false,t:false},
+          {e:'gem',n:'Jewelry Boxes',                   d:'Specialised packaging for jewellery and small valuables.',                cat:'Retail',          ind:'Jewelry',      r:1345,pr:'$1.95', feat:'Velvet lined secure closure',          s:['Velvet lining','Secure closure','Elegant design'],         f:false,t:false},
+          {e:'sparkles',n:'Cosmetic Packaging',         d:'Elegant packaging for beauty products.',                                  cat:'Retail',          ind:'Beauty',       r:1234,pr:'$4.95', feat:'Custom luxury branding',               s:['Luxury finish','Custom colours','Magnetic closure'],       f:false,t:true},
+          {e:'shirt',n:'Clothing Boxes',                d:'Premium boxes for apparel and fashion items.',                            cat:'Retail',          ind:'Fashion',      r:987, pr:'$3.75', feat:'Flat pack brand customised',           s:['Flat pack design','Easy assembly','Brand customisation'],  f:false,t:true},
           /* 33–39 Specialty */
-          {e:'⚡',n:'Anti-Static Bags',                d:'ESD protection bags for electronic components.',                          cat:'Specialty',       ind:'Electronics',  r:567, pr:'$0.45', feat:'ESD discharge protection',             s:['ESD protection','Transparent','Heat sealable'],            f:false,t:true},
-          {e:'⚠️',n:'Hazmat Packaging',                d:'UN certified packaging for dangerous goods compliant with international regulations.',cat:'Specialty',ind:'Chemical',r:234,pr:'$25.99',feat:'UN certified compliance',             s:['UN certified','DOT approved','Multi-hazard'],              f:false,t:false},
-          {e:'💊',n:'Pharmaceutical Packaging',        d:'Tamper-evident packaging for pharmaceutical products.',                  cat:'Specialty',       ind:'Pharma',       r:445, pr:'$3.75', feat:'Tamper-evident childproof',            s:['Tamper evident','Child resistant','FDA compliant'],        f:false,t:true},
-          {e:'🏥',n:'Medical Device Packaging',        d:'Sterile packaging for medical devices.',                                  cat:'Specialty',       ind:'Medical',      r:267, pr:'$15.25',feat:'ISO 11607 sterile barrier',           s:['ISO 11607','Sterile barrier','Peel-open design'],          f:false,t:false},
-          {e:'❄️',n:'Temperature Controlled Packaging',d:'Advanced thermal packaging for sensitive pharmaceutical and food products.',cat:'Specialty',    ind:'Cold Chain',   r:156, pr:'$45.99',feat:'48hr 2-8°C maintenance',              s:['Maintains 2-8°C','48+ hour duration','Data logging'],     f:false,t:true},
-          {e:'🔬',n:'Clean Room Packaging',            d:'Sterile packaging for clean room environments.',                          cat:'Specialty',       ind:'Semiconductor',r:234, pr:'$12.50',feat:'ISO Class 5 particle-free',           s:['ISO Class 5','Particle-free','Sterile'],                   f:false,t:false},
-          {e:'🌱',n:'Eco-Friendly Packaging',          d:'100% biodegradable packaging solutions for sustainable operations.',      cat:'Specialty',       ind:'Sustainable',  r:1456,pr:'$5.25', feat:'90-day biodegradable',                 s:['100% biodegradable','90-day breakdown','Compostable'],    f:false,t:true}
+          {e:'zap',n:'Anti-Static Bags',                d:'ESD protection bags for electronic components.',                          cat:'Specialty',       ind:'Electronics',  r:567, pr:'$0.45', feat:'ESD discharge protection',             s:['ESD protection','Transparent','Heat sealable'],            f:false,t:true},
+          {e:'alert-triangle',n:'Hazmat Packaging',     d:'UN certified packaging for dangerous goods compliant with international regulations.',cat:'Specialty',ind:'Chemical',r:234,pr:'$25.99',feat:'UN certified compliance',             s:['UN certified','DOT approved','Multi-hazard'],              f:false,t:false},
+          {e:'pill',n:'Pharmaceutical Packaging',       d:'Tamper-evident packaging for pharmaceutical products.',                  cat:'Specialty',       ind:'Pharma',       r:445, pr:'$3.75', feat:'Tamper-evident childproof',            s:['Tamper evident','Child resistant','FDA compliant'],        f:false,t:true},
+          {e:'cross',n:'Medical Device Packaging',      d:'Sterile packaging for medical devices.',                                  cat:'Specialty',       ind:'Medical',      r:267, pr:'$15.25',feat:'ISO 11607 sterile barrier',           s:['ISO 11607','Sterile barrier','Peel-open design'],          f:false,t:false},
+          {e:'thermometer',n:'Temperature Controlled Packaging',d:'Advanced thermal packaging for sensitive pharmaceutical and food products.',cat:'Specialty',ind:'Cold Chain',r:156,pr:'$45.99',feat:'48hr 2-8°C maintenance',             s:['Maintains 2-8°C','48+ hour duration','Data logging'],     f:false,t:true},
+          {e:'microscope',n:'Clean Room Packaging',     d:'Sterile packaging for clean room environments.',                          cat:'Specialty',       ind:'Semiconductor',r:234, pr:'$12.50',feat:'ISO Class 5 particle-free',           s:['ISO Class 5','Particle-free','Sterile'],                   f:false,t:false},
+          {e:'sprout',n:'Eco-Friendly Packaging',       d:'100% biodegradable packaging solutions for sustainable operations.',      cat:'Specialty',       ind:'Sustainable',  r:1456,pr:'$5.25', feat:'90-day biodegradable',                 s:['100% biodegradable','90-day breakdown','Compostable'],    f:false,t:true}
         ];
 
         /* ── Build rich product card HTML ──────────────────────────────── */
         function buildPcard(idx) {
           var p = P[idx];
           var h = '<div class="pcard">';
-          h += '<div class="pcard-emoji">' + p.e + '</div>';
+          h += '<div class="pcard-emoji"><i data-lucide="' + p.e + '" style="width:20px;height:20px"></i></div>';
           h += '<div class="pcard-name">' + p.n + '</div>';
           h += '<div class="pcard-desc">' + p.d + '</div>';
           h += '<div class="pcard-tags"><span class="pcard-tag">' + p.cat + '</span><span class="pcard-tag">' + p.ind + '</span></div>';
@@ -2216,6 +2220,7 @@
           }
           allGrid.innerHTML = allCardsHtml + (noResults ? noResults.outerHTML : '');
           noResults = document.getElementById('modal-no-results');
+          if (window.lucide) lucide.createIcons();
         }
 
         /* ── Filter state ───────────────────────────────────────────────── */

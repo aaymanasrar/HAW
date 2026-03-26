@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
           const target = document.getElementById(href.slice(1));
           if (target) {
             setTimeout(() => {
-              const headerH = document.querySelector(".site-header")?.offsetHeight || 68;
+              const headerH = 16;
               const top = target.getBoundingClientRect().top + window.scrollY - headerH;
               window.scrollTo({ top, behavior: "smooth" });
             }, 150); // wait for menu to close first

@@ -277,6 +277,11 @@
       #quote {
         scroll-margin-top: 80px;
       }
+      @media (max-width: 720px) {
+        #services, #products, #about, #contact, #quote {
+          scroll-margin-top: 72px;
+        }
+      }
       .hero-fade-wrap {
         will-change: opacity, transform;
         transition: opacity 0.05s linear, transform 0.05s linear;
@@ -294,9 +299,8 @@
       .hero-box-img {
         position: absolute;
         opacity: 0;
-        filter: drop-shadow(0 28px 48px rgba(0,0,0,0.12)) drop-shadow(0 6px 14px rgba(0,0,0,0.06));
         animation: heroBoxFloat linear infinite both;
-        will-change: transform, opacity;
+        will-change: transform;
         transform-origin: center center;
         transition: opacity 1.4s ease;
       }
@@ -393,15 +397,54 @@
       }
 
       @media (max-width: 720px) {
-        .hero-box-img:nth-child(2),
-        .hero-box-img:nth-child(3),
-        .hero-box-img:nth-child(5),
-        .hero-box-img:nth-child(6),
-        .hero-box-img:nth-child(8),
-        .hero-box-img:nth-child(9),
-        .hero-box-img:nth-child(11),
-        .hero-box-img:nth-child(12) { display: none; }
-        .hero-box-img { width: clamp(120px, 32vw, 190px) !important; }
+        /* Hide all, then selectively show 6 spread evenly */
+        .hero-box-img { display: none; }
+
+        /* Top row — left & right */
+        .hero-box-img:nth-child(1) {
+          display: block;
+          width: clamp(110px, 36vw, 175px);
+          top: 4vh; left: 1%;
+          --box-rot: -10deg; --box-opacity: 0.50; --box-travel: -12px;
+          animation-duration: 7s;
+        }
+        .hero-box-img:nth-child(3) {
+          display: block;
+          width: clamp(110px, 34vw, 165px);
+          top: 3vh; left: 54%;
+          --box-rot: 11deg; --box-opacity: 0.48; --box-travel: -10px;
+          animation-duration: 8s;
+        }
+        /* Mid row — left & right */
+        .hero-box-img:nth-child(5) {
+          display: block;
+          width: clamp(100px, 32vw, 155px);
+          top: 48vh; left: 2%;
+          --box-rot: 8deg; --box-opacity: 0.38; --box-travel: -9px;
+          animation-duration: 9s;
+        }
+        .hero-box-img:nth-child(6) {
+          display: block;
+          width: clamp(100px, 30vw, 150px);
+          top: 46vh; left: 56%;
+          --box-rot: -9deg; --box-opacity: 0.36; --box-travel: -8px;
+          animation-duration: 8.5s;
+        }
+        /* Bottom row — left & right */
+        .hero-box-img:nth-child(9) {
+          display: block;
+          width: clamp(110px, 34vw, 165px);
+          top: 80vh; left: 1%;
+          --box-rot: -12deg; --box-opacity: 0.45; --box-travel: -11px;
+          animation-duration: 7.5s;
+        }
+        .hero-box-img:nth-child(10) {
+          display: block;
+          width: clamp(105px, 32vw, 158px);
+          top: 79vh; left: 55%;
+          --box-rot: 13deg; --box-opacity: 0.42; --box-travel: -10px;
+          animation-duration: 9.5s;
+        }
       }
 
       /* ── Contact section — 4-up card grid ───────────────────────────── */

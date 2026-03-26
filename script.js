@@ -21,6 +21,13 @@ document.addEventListener("DOMContentLoaded", () => {
     navToggle.addEventListener("click", () => {
       navLinks.classList.toggle("open");
     });
+
+    // Close menu when any nav link is clicked (mobile)
+    navLinks.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("open");
+      });
+    });
   }
 
   if (form) {
